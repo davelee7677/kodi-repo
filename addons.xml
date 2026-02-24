@@ -1,1 +1,93 @@
-2d6e4788860d8c53eb458ca10091ab66
+<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+  <addon id="context.themoviedb.helper" name="TMDbHelper Context Menu" version="2.0.0" provider-name="jurialmunkey">
+    <extension point="xbmc.python.contextmenu" library="main.py">
+      <description>TMDbHelper Context Menu</description>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en">TMDbHelper Context Menu</summary>
+      <description lang="en">Context menu integration for TMDb Helper.</description>
+      <platform>all</platform>
+    </extension>
+  </addon>
+  <addon id="plugin.video.themoviedb.helper" name="TMDb Helper" version="6.15.1" provider-name="jurialmunkey">
+    <extension point="xbmc.python.pluginsource" library="main.py">
+      <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en">TMDb Helper</summary>
+      <description lang="en">Helper plugin for The Movie Database integration.</description>
+      <platform>all</platform>
+    </extension>
+  </addon>
+  <addon id="repository.polar.ascent" name="Polar Ascent Repository" version="1.0.0" provider-name="Polar Ascent">
+    <extension point="xbmc.addon.repository" name="Polar Ascent Repository">
+      <info compressed="false">https://raw.githubusercontent.com/davelee7677/kodi-repo/main/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/davelee7677/kodi-repo/main/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/davelee7677/kodi-repo/main/</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en">Polar Ascent Skin Repository</summary>
+      <description lang="en">Local repository providing Polar Ascent skin and all required dependencies.</description>
+      <platform>all</platform>
+    </extension>
+  </addon>
+  <addon id="resource.font.robotocjksc" name="Roboto CJK SC Font" version="0.0.3" provider-name="jurialmunkey">
+    <extension point="kodi.resource.font" />
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en">Roboto CJK SC Font</summary>
+      <description lang="en">Roboto CJK SC font resource.</description>
+      <platform>all</platform>
+    </extension>
+  </addon>
+  <addon id="resource.images.studios.coloured" name="Studio Icons - Coloured" version="0.0.23" provider-name="Team Kodi">
+    <extension point="kodi.resource.images" compile="true" type="studios" />
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en">Studio Icons - Coloured</summary>
+      <description lang="en">Coloured studio icon images.</description>
+      <platform>all</platform>
+    </extension>
+  </addon>
+  <addon id="resource.images.weathericons.white" name="Weather Icons - White" version="0.0.6" provider-name="Team Kodi">
+    <extension point="kodi.resource.images" compile="true" type="weather" />
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en">Weather Icons - White</summary>
+      <description lang="en">White weather icon images.</description>
+      <platform>all</platform>
+    </extension>
+  </addon>
+  <addon id="script.skinvariables" name="Skin Variables" version="2.1.35" provider-name="jurialmunkey">
+    <extension point="xbmc.python.script" library="main.py" />
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en">Skin Variables</summary>
+      <description lang="en">Script for managing skin variables and settings.</description>
+      <platform>all</platform>
+    </extension>
+  </addon>
+  <addon id="script.texturemaker" name="Texture Maker" version="0.2.11" provider-name="jurialmunkey">
+    <extension point="xbmc.python.script" library="main.py" />
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en">Texture Maker</summary>
+      <description lang="en">Script for generating skin textures.</description>
+      <platform>all</platform>
+    </extension>
+  </addon>
+  <addon id="script.wikipedia" name="Wikipedia" version="0.0.9" provider-name="jurialmunkey">
+    <extension point="xbmc.python.script" library="main.py" />
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en">Wikipedia</summary>
+      <description lang="en">Wikipedia integration script.</description>
+      <platform>all</platform>
+    </extension>
+  </addon>
+  <addon id="skin.polar.ascent" name="Polar Ascent" version="1.0.0" provider-name="Polar Ascent">
+    <extension point="xbmc.gui.skin" debugging="false" defaultthemename="Textures.xbt" effectslowdown="1">
+      <res aspect="16:9" default="true" folder="1080i" height="1080" width="1920" />
+    </extension>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en">Polar Ascent</summary>
+      <description lang="en">Polar Ascent skin for Kodi, based on Arctic Fuse 3.</description>
+      <platform>all</platform>
+    </extension>
+  </addon>
+</addons>
