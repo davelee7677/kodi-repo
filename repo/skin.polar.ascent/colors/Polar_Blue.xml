@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<colors>
+    <!-- Polar Blue Color Scheme - Arctic/Ice Theme -->
+    
+    <!-- Main - Cool blues instead of blacks/grays -->
+    <color name="main_bg_100">ff0a1f35</color>  <!-- Deep polar blue -->
+    <color name="main_bg_90">e70a1f35</color>
+    <color name="main_bg_70">b30a1f35</color>
+    <color name="main_bg_50">800a1f35</color>
+    <color name="main_bg_30">4d0a1f35</color>
+    <color name="main_bg_12">1f0a1f35</color>
+
+    <color name="main_soft">4d2a5a8a</color>  <!-- Mid blue soft -->
+    <color name="main_hard">b32a5a8a</color>  <!-- Mid blue hard -->
+    <color name="main_back">ff1a4d7a</color>  <!-- Deep blue background -->
+    <color name="main_logo">ff7ab8d4</color>  <!-- Light teal for accents -->
+
+    <!-- Dialogs - Blue theme -->
+    <color name="dialog_nib">ff4a9db5</color>  <!-- Teal accent -->
+    <color name="dialog_overlay">b3001530</color>  <!-- Dark blue overlay -->
+
+    <color name="dialog_bg_100">ff153550</color>
+    <color name="dialog_bg_90">e7153550</color>
+    <color name="dialog_bg_70">b3153550</color>
+    <color name="dialog_bg_50">80153550</color>
+    <color name="dialog_bg_30">4d153550</color>
+    <color name="dialog_bg_12">1f153550</color>
+
+    <!-- Panels - Ice blue tones -->
+    <color name="panel_bg_70">b31a3f5a</color>
+    <color name="panel_bg_50">801a3f5a</color>
+    <color name="panel_bg_12">1f1a3f5a</color>
+
+    <!-- Overlay - Cool blue highlights -->
+    <color name="overlay_soft">125ab5cf</color>  <!-- Cyan soft -->
+    <color name="overlay_hard">335ab5cf</color>  <!-- Cyan hard -->
+
+    <!-- Shadow - Deep blue shadows -->
+    <color name="shadow_soft">1a001530</color>
+    <color name="shadow_hard">80001530</color>
+    <color name="shadow_full">c0001530</color>
+    <color name="shadow_back">80002040</color>
+</colors>
