@@ -41,9 +41,7 @@
                 "ActivateWindow(1104)",
                 "sleep=0.3",
                 "ActivateWindow(1106)",
-                "sleep=0.3",
-                "ActivateWindow(1107)",
-                "sleep=0.3",
+                "sleep=0.3"
                 "ActivateWindow(1108)",
                 "sleep=0.3",
 				"ActivateWindow(1109)",
