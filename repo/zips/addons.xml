@@ -12,11 +12,31 @@
         <description lang="en">Repository for the Polar Ascent skin for Kodi, based on Arctic Fuse 3.</description>
         <platform>all</platform>
     </extension>
+</addon><addon id="script.texturemaker" version="0.2.11" name="Texture Maker" provider-name="jurialmunkey">
+<requires>
+  <import addon="xbmc.python" version="3.0.0" />
+  <import addon="script.module.pil" version="1.1.7" />
+  <import addon="script.module.jurialmunkey" version="0.2.28" />
+</requires>
+<extension point="xbmc.python.script" library="script.py" />
+<extension point="xbmc.python.pluginsource" library="plugin.py">
+  <provides>image</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+  <summary lang="en_GB">Texture Maker helps skinners build gradient based textures</summary>
+  <description lang="en_GB">Texture Maker helps skinners build gradient based textures</description>
+  <disclaimer lang="en_GB">For skinners</disclaimer>
+  <license>GPL-3.0-or-later</license>
+  <assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.jpg</fanart>
+  </assets>
+</extension>
 </addon><addon id="skin.polar.ascent" name="Polar Ascent" provider-name="flightrisk77" version="1.0.0">
     <requires>
         <import addon="xbmc.gui" version="5.17.0" />
         <import addon="script.skinvariables" version="2.1.28" />
-        <import addon="script.texturemaker" version="0.2.9" />
+        <import addon="script.texturemaker" version="0.2.11" />
         <import addon="plugin.video.themoviedb.helper" version="6.14.3" />
         <import addon="resource.images.weathericons.white" version="0.0.1" />
         <import addon="resource.images.studios.coloured" version="0.0.1" />
