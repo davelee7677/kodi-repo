@@ -31,7 +31,7 @@
     <!-- Highlight Color -->
     <variable name="ColorHighlight">
         <value condition="!String.IsEmpty(Skin.String(focuscolor.name))">$INFO[Skin.String(focuscolor.name)]</value>
-        <value>ffffffff</value>
+        <value>ff1565c0</value>
     </variable>
 
     <!-- Watched / Progress Color -->
@@ -83,17 +83,17 @@
 
     <!-- Selected Color -->
     <variable name="ColorSelected_30">
-        <value condition="!Skin.HasSetting(RevertSelectedText)">4dc0c8d0</value>
+        <value condition="!Skin.HasSetting(RevertSelectedText)">4dffffff</value>
         <value>4dffffff</value>
     </variable>
 
     <variable name="ColorSelected">
-        <value condition="!Skin.HasSetting(RevertSelectedText)">ffc0c8d0</value>
-        <value>ffffffff</value>
+        <value condition="!Skin.HasSetting(RevertSelectedText)">ffffffff</value>
+        <value>ff1565c0</value>
     </variable>
     <variable name="ColorSelectedInverted">
         <value condition="!Skin.HasSetting(RevertSelectedText)">ffffffff</value>
-        <value>ffc0c8d0</value>
+        <value>ffffffff</value>
     </variable>
 
     <!-- Tricks for Settings Changer -->
