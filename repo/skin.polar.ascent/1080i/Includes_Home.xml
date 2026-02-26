@@ -572,7 +572,7 @@
                     <!-- White circle background removed -->
                     <control type="image">
                         <include>Home_Grouplist_Icon_Definition</include>
-                        <texture background="true" colordiffuse="FFFFFF">$VAR[Home_Icon_Current]</texture>
+                        <texture background="true" colordiffuse="FFFFFFFF">$VAR[Home_Icon_Current]</texture>
                     </control>
                 </control>
             </control>
@@ -617,7 +617,7 @@
                     </control>
                     <control type="image">
                         <include>Home_Grouplist_Icon_Definition</include>
-                        <texture background="true" colordiffuse="FFFFFF">$PARAM[icon]</texture>
+                        <texture background="true" colordiffuse="FFFFFFFF">$PARAM[icon]</texture>
                         <visible>Control.HasFocus($PARAM[id])</visible>
                     </control>
                 </control>
@@ -626,7 +626,7 @@
                     <!-- White circle background removed -->
                     <control type="image">
                         <include>Home_Grouplist_Icon_Definition</include>
-                        <texture background="true" colordiffuse="FFFFFF">$PARAM[icon]</texture>
+                        <texture background="true" colordiffuse="FFFFFFFF">$PARAM[icon]</texture>
                     </control>
                 </control>
             </control>
