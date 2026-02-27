@@ -41,12 +41,12 @@
                 "ActivateWindow(1104)",
                 "sleep=0.3",
                 "ActivateWindow(1106)",
-                "sleep=0.3"
+                "sleep=0.3",
                 "ActivateWindow(1108)",
                 "sleep=0.3",
-				"ActivateWindow(1109)",
+                "ActivateWindow(1109)",
                 "sleep=0.3",
-				"ActivateWindow(1110)",
+                "ActivateWindow(1110)",
                 "sleep=0.3",
                 "ActivateWindow(Home)"
             ]
