@@ -610,14 +610,25 @@
                 </control>
                 <control type="group">
                     <visible>![Window.IsVisible($PARAM[window]) + Integer.IsEqual(System.CurrentControlID,300)]</visible>
+                    <!-- Icon unfocused - 70% brightness -->
                     <control type="image">
                         <include>Home_Grouplist_Icon_Definition</include>
                         <texture background="true" colordiffuse="main_fg_70">$PARAM[icon]</texture>
                         <visible>!Control.HasFocus($PARAM[id])</visible>
                     </control>
+                    <!-- Icon focused - full brightness -->
                     <control type="image">
                         <include>Home_Grouplist_Icon_Definition</include>
                         <texture background="true" colordiffuse="FFFFFFFF">$PARAM[icon]</texture>
+                        <visible>Control.HasFocus($PARAM[id])</visible>
+                    </control>
+                    <!-- Chrome ring - only on focus -->
+                    <control type="image">
+                        <centerleft>50%</centerleft>
+                        <centertop>50%</centertop>
+                        <width>60</width>
+                        <height>60</height>
+                        <texture colordiffuse="FFFFFFFF">special://skin/media/common/ring_chrome_focus.png</texture>
                         <visible>Control.HasFocus($PARAM[id])</visible>
                     </control>
                 </control>
@@ -627,6 +638,14 @@
                     <control type="image">
                         <include>Home_Grouplist_Icon_Definition</include>
                         <texture background="true" colordiffuse="FFFFFFFF">$PARAM[icon]</texture>
+                    </control>
+                    <!-- Chrome ring - active hub indicator -->
+                    <control type="image">
+                        <centerleft>50%</centerleft>
+                        <centertop>50%</centertop>
+                        <width>60</width>
+                        <height>60</height>
+                        <texture colordiffuse="FFFFFFFF">special://skin/media/common/ring_chrome_focus.png</texture>
                     </control>
                 </control>
             </control>
