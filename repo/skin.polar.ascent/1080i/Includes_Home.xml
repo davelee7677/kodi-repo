@@ -626,8 +626,8 @@
                     <control type="image">
                         <centerleft>50%</centerleft>
                         <centertop>50%</centertop>
-                        <width>60</width>
-                        <height>60</height>
+                        <width>90</width>
+                        <height>90</height>
                         <texture colordiffuse="FFFFFFFF">special://skin/media/common/ring_chrome_focus.png</texture>
                         <visible>Control.HasFocus($PARAM[id])</visible>
                     </control>
@@ -643,8 +643,8 @@
                     <control type="image">
                         <centerleft>50%</centerleft>
                         <centertop>50%</centertop>
-                        <width>60</width>
-                        <height>60</height>
+                        <width>90</width>
+                        <height>90</height>
                         <texture colordiffuse="FFFFFFFF">special://skin/media/common/ring_chrome_focus.png</texture>
                     </control>
                 </control>
@@ -695,8 +695,8 @@
     <include name="Home_Grouplist_Icon_Definition">
         <centerleft>50%</centerleft>
         <centertop>50%</centertop>
-        <width>40</width>
-        <height>40</height>
+        <width>70</width>
+        <height>70</height>
         <bordersize>icon_home_bordersize</bordersize>
     </include>
 </includes>
