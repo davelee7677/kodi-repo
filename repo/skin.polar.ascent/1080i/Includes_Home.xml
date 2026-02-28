@@ -626,8 +626,8 @@
                     <control type="image">
                         <centerleft>50%</centerleft>
                         <centertop>50%</centertop>
-                        <width>120</width>
-                        <height>120</height>
+                        <width>100</width>
+                        <height>100</height>
                         <texture colordiffuse="FFFFFFFF">special://skin/media/common/ring_chrome_focus.png</texture>
                         <visible>Control.HasFocus($PARAM[id])</visible>
                     </control>
@@ -643,8 +643,8 @@
                     <control type="image">
                         <centerleft>50%</centerleft>
                         <centertop>50%</centertop>
-                        <width>120</width>
-                        <height>120</height>
+                        <width>100</width>
+                        <height>100</height>
                         <texture colordiffuse="FFFFFFFF">special://skin/media/common/ring_chrome_focus.png</texture>
                     </control>
                 </control>
