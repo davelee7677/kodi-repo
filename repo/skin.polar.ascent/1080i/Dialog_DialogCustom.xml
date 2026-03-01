@@ -165,6 +165,28 @@
             <param name="groupid">8101</param>
             <param name="control">radiobutton</param>
             <param name="istext">true</param>
+            <param name="label">$LOCALIZE[31138]</param>
+            <include>Action_Scheme_Onclick_Aqua</include>
+            <selected>$EXP[Exp_ColourPreset_AquaClassic]</selected>
+            <include>DialogCustom_Reload_1118</include>
+        </include>
+        <include content="Button_Dialog_Setting">
+            <param name="dialog">true</param>
+            <param name="id">8002</param>
+            <param name="groupid">8102</param>
+            <param name="control">radiobutton</param>
+            <param name="istext">true</param>
+            <param name="label">$LOCALIZE[31242]</param>
+            <include>Action_Scheme_Onclick_Slate</include>
+            <selected>$EXP[Exp_ColourPreset_BlueSlate]</selected>
+            <include>DialogCustom_Reload_1118</include>
+        </include>
+        <include content="Button_Dialog_Setting">
+            <param name="dialog">true</param>
+            <param name="id">8003</param>
+            <param name="groupid">8103</param>
+            <param name="control">radiobutton</param>
+            <param name="istext">true</param>
             <param name="label">$LOCALIZE[31560]</param>
             <include>Action_Scheme_Onclick_Bright</include>
             <selected>$EXP[Exp_ColourPreset_BrightWhite]</selected>
@@ -172,8 +194,8 @@
         </include>
         <include content="Button_Dialog_Setting">
             <param name="dialog">true</param>
-            <param name="id">8002</param>
-            <param name="groupid">8102</param>
+            <param name="id">8004</param>
+            <param name="groupid">8104</param>
             <param name="control">radiobutton</param>
             <param name="istext">true</param>
             <param name="label">$LOCALIZE[31140]</param>
@@ -183,48 +205,35 @@
         </include>
         <include content="Button_Dialog_Setting">
             <param name="dialog">true</param>
-            <param name="id">8003</param>
-            <param name="groupid">8103</param>
-            <param name="control">radiobutton</param>
-            <param name="istext">true</param>
-            <param name="label">$LOCALIZE[31138]</param>
-            <include>Action_Scheme_Onclick_Aqua</include>
-            <selected>$EXP[Exp_ColourPreset_AquaClassic]</selected>
-            <include>DialogCustom_Reload_1118</include>
-        </include>
-        <include content="Button_Dialog_Setting">
-            <param name="dialog">true</param>
-            <param name="id">8004</param>
-            <param name="groupid">8104</param>
-            <param name="control">radiobutton</param>
-            <param name="istext">true</param>
-            <param name="label">$LOCALIZE[31139]</param>
-            <include>Action_Scheme_Onclick_Sunset</include>
-            <selected>$EXP[Exp_ColourPreset_TropicalSunset]</selected>
-            <include>DialogCustom_Reload_1118</include>
-        </include>
-
-        <include content="Button_Dialog_Setting">
-            <param name="dialog">true</param>
             <param name="id">8005</param>
             <param name="groupid">8105</param>
             <param name="control">radiobutton</param>
             <param name="istext">true</param>
-            <param name="label">$LOCALIZE[31242]</param>
-            <include>Action_Scheme_Onclick_Slate</include>
-            <selected>$EXP[Exp_ColourPreset_BlueSlate]</selected>
+            <param name="label">$LOCALIZE[31243]</param>
+            <include>Action_Scheme_Onclick_Midnight</include>
+            <selected>$EXP[Exp_ColourPreset_MidnightPurple]</selected>
             <include>DialogCustom_Reload_1118</include>
         </include>
-
         <include content="Button_Dialog_Setting">
             <param name="dialog">true</param>
             <param name="id">8006</param>
             <param name="groupid">8106</param>
             <param name="control">radiobutton</param>
             <param name="istext">true</param>
-            <param name="label">$LOCALIZE[31243]</param>
-            <include>Action_Scheme_Onclick_Midnight</include>
-            <selected>$EXP[Exp_ColourPreset_MidnightPurple]</selected>
+            <param name="label">$LOCALIZE[31561]</param>
+            <include>Action_Scheme_Onclick_Polar</include>
+            <selected>$EXP[Exp_ColourPreset_PolarBlue]</selected>
+            <include>DialogCustom_Reload_1118</include>
+        </include>
+        <include content="Button_Dialog_Setting">
+            <param name="dialog">true</param>
+            <param name="id">8007</param>
+            <param name="groupid">8107</param>
+            <param name="control">radiobutton</param>
+            <param name="istext">true</param>
+            <param name="label">$LOCALIZE[31139]</param>
+            <include>Action_Scheme_Onclick_Sunset</include>
+            <selected>$EXP[Exp_ColourPreset_TropicalSunset]</selected>
             <include>DialogCustom_Reload_1118</include>
         </include>
     </include>

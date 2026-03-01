@@ -2085,6 +2085,10 @@ msgctxt "#31560"
 msgid "Bright White"
 msgstr ""
 
+msgctxt "#31561"
+msgid "Polar Blue"
+msgstr ""
+
 #: /1080i/Includes_Views_Row.xml
 msgctxt "#31563"
 msgid "Row Card"
