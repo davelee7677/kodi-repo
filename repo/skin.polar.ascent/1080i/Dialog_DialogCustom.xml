@@ -287,6 +287,18 @@
 
         <include content="Button_Dialog_Setting">
             <param name="dialog">true</param>
+            <param name="id">8005</param>
+            <param name="groupid">8105</param>
+            <param name="control">radiobutton</param>
+            <param name="label">$LOCALIZE[31561]</param>
+            <param name="istext">true</param>
+            <onclick>Skin.SetString(focuscolor.name,ff4a9db5)</onclick>
+            <onclick>Skin.SetBool(RevertSelectedText)</onclick>
+            <selected>$EXP[Exp_ColourHighlight_IsPolar]</selected>
+        </include>
+
+        <include content="Button_Dialog_Setting">
+            <param name="dialog">true</param>
             <param name="id">8007</param>
             <param name="groupid">8107</param>
             <param name="control">radiobutton</param>

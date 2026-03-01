@@ -179,6 +179,7 @@
         <value condition="$EXP[Exp_ColourHighlight_IsMiami]">$LOCALIZE[31229]</value>
         <value condition="$EXP[Exp_ColourHighlight_IsWhite]">$LOCALIZE[742]</value>
         <value condition="$EXP[Exp_ColourHighlight_IsBlue]">$LOCALIZE[762]</value>
+        <value condition="$EXP[Exp_ColourHighlight_IsPolar]">$LOCALIZE[31561]</value>
         <value condition="$EXP[Exp_ColourHighlight_IsPurple]">$LOCALIZE[31220]</value>
         <value>$LOCALIZE[636]</value>
     </variable>
@@ -191,6 +192,7 @@
         <value condition="Skin.String(Background.Image,special://skin/extras/backgrounds/blur/orange_blur.jpg)">$LOCALIZE[13342]</value>
         <value condition="Skin.String(Background.Image,special://skin/extras/backgrounds/blur/slate_blur.jpg)">$LOCALIZE[31221]</value>
         <value condition="Skin.String(Background.Image,special://skin/extras/backgrounds/blur/coal_blur.jpg)">$LOCALIZE[31222]</value>
+        <value condition="Skin.String(Background.Image,special://skin/extras/backgrounds/blur/polar_blur.jpg)">$LOCALIZE[31561]</value>
         <value>$LOCALIZE[636]</value>
     </variable>
 
