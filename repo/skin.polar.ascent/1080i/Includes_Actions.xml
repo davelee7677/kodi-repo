@@ -330,7 +330,7 @@
     </include>
 
     <include name="Action_Scheme_Onclick_Polar">
-        <onclick>Skin.SetString(focuscolor.name,ff4a9db5)</onclick>
+        <onclick>Skin.Reset(focuscolor.name)</onclick>
         <onclick>Skin.SetBool(RevertSelectedText)</onclick>
         <onclick condition="!$EXP[Exp_TMDbHelper_IsBlur]">Skin.SetString(Background.DialogImage,Polar)</onclick>
         <onclick condition="$EXP[Exp_TMDbHelper_IsBlur]">Skin.SetString(Background.DialogImage,Adaptive)</onclick>
