@@ -12,4 +12,7 @@
         <description lang="en">Repository for the Polar Ascent skin for Kodi, based on Arctic Fuse 3.</description>
         <platform>all</platform>
     </extension>
+    <requires>
+        <import addon="xbmc.addon" version="12.0.0"/>
+    </requires>
 </addon>
