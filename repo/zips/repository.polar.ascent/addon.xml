@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="repository.polar.ascent" name="Polar Ascent Repository" version="1.0.1" provider-name="davelee7677">
+    <requires>
+        <import addon="xbmc.addon" version="21.0.0"/>
+    </requires>
     <extension point="xbmc.addon.repository" name="Polar Ascent Repository">
         <dir>
             <info compressed="false">https://raw.githubusercontent.com/davelee7677/kodi-repo/master/repo/zips/addons.xml</info>
@@ -12,7 +15,4 @@
         <description lang="en">Repository for the Polar Ascent skin for Kodi, based on Arctic Fuse 3.</description>
         <platform>all</platform>
     </extension>
-    <requires>
-        <import addon="xbmc.addon" version="12.0.0"/>
-    </requires>
 </addon>
