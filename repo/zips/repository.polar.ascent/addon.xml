@@ -12,7 +12,7 @@
     </extension>
     <extension point="xbmc.addon.metadata">
         <summary lang="en">Polar Ascent Repository</summary>
-        <description lang="en">Repository for the Polar Ascent skin for Kodi, based on Arctic Fuse 3.</description>
+        <description lang="en">Repository for the Polar Ascent skin for Kodi</description>
         <platform>all</platform>
     </extension>
 </addon>
