@@ -8,19 +8,19 @@
     <color name="main_fg_30">4dffffff</color>
     <color name="main_fg_12">1fffffff</color>
     <color name="main_fg_06">0fffffff</color>
-    <color name="main_bg_100">ff0a1628</color>
-    <color name="main_bg_90">e70a1628</color>
-    <color name="main_bg_70">b30a1628</color>
-    <color name="main_bg_50">800a1628</color>
-    <color name="main_bg_30">4d0a1628</color>
-    <color name="main_bg_12">1f0a1628</color>
-    <color name="main_soft">4d1e4a7a</color>
-    <color name="main_hard">b31e4a7a</color>
-    <color name="main_back">ff1e4a7a</color>
-    <color name="main_logo">ff00d4ff</color>
+    <color name="main_bg_100">ff0a1f35</color>
+    <color name="main_bg_90">e70a1f35</color>
+    <color name="main_bg_70">b30a1f35</color>
+    <color name="main_bg_50">800a1f35</color>
+    <color name="main_bg_30">4d0a1f35</color>
+    <color name="main_bg_12">1f0a1f35</color>
+    <color name="main_soft">4d2a5a8a</color>
+    <color name="main_hard">b32a5a8a</color>
+    <color name="main_back">ff1a4d7a</color>
+    <color name="main_logo">ff7ab8d4</color>
     <!-- Dialogs -->
-    <color name="dialog_nib">ff0d2540</color>
-    <color name="dialog_overlay">b3000810</color>
+    <color name="dialog_nib">ff4a9db5</color>
+    <color name="dialog_overlay">b3001530</color>
     <color name="dialog_fg_100">ffffffff</color>
     <color name="dialog_fg_90">e7ffffff</color>
     <color name="dialog_fg_70">b3ffffff</color>
@@ -28,16 +28,16 @@
     <color name="dialog_fg_30">4dffffff</color>
     <color name="dialog_fg_12">1fffffff</color>
     <color name="dialog_fg_06">0fffffff</color>
-    <color name="dialog_bg_100">ff0d1e35</color>
-    <color name="dialog_bg_90">e70d1e35</color>
-    <color name="dialog_bg_70">b30d1e35</color>
-    <color name="dialog_bg_50">800d1e35</color>
-    <color name="dialog_bg_30">4d0d1e35</color>
-    <color name="dialog_bg_12">1f0d1e35</color>
+    <color name="dialog_bg_100">ff153550</color>
+    <color name="dialog_bg_90">e7153550</color>
+    <color name="dialog_bg_70">b3153550</color>
+    <color name="dialog_bg_50">80153550</color>
+    <color name="dialog_bg_30">4d153550</color>
+    <color name="dialog_bg_12">1f153550</color>
     <!-- Panels -->
-    <color name="panel_bg_70">b30d1e35</color>
-    <color name="panel_bg_50">800d1e35</color>
-    <color name="panel_bg_12">1f0d1e35</color>
+    <color name="panel_bg_70">b31a3f5a</color>
+    <color name="panel_bg_50">801a3f5a</color>
+    <color name="panel_bg_12">1f1a3f5a</color>
     <color name="panel_fg_100">ffffffff</color>
     <color name="panel_fg_90">e7ffffff</color>
     <color name="panel_fg_70">b3ffffff</color>
@@ -45,13 +45,13 @@
     <color name="panel_fg_30">4dffffff</color>
     <color name="panel_fg_12">1fffffff</color>
     <!-- Overlay -->
-    <color name="overlay_soft">1a00d4ff</color>
-    <color name="overlay_hard">3300d4ff</color>
+    <color name="overlay_soft">125ab5cf</color>
+    <color name="overlay_hard">335ab5cf</color>
     <!-- Shadow -->
-    <color name="shadow_soft">1a000810</color>
-    <color name="shadow_hard">80000810</color>
-    <color name="shadow_full">c0000810</color>
-    <color name="shadow_back">80000810</color>
+    <color name="shadow_soft">1a001530</color>
+    <color name="shadow_hard">80001530</color>
+    <color name="shadow_full">c0001530</color>
+    <color name="shadow_back">80002040</color>
     <!-- Misc -->
     <color name="yellow_star">d7ffe033</color>
 </colors>
