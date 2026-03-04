@@ -2,7 +2,7 @@
 <window>
     <include>Action_BlurImage_SimpleBackground_Onload</include>
     <defaultcontrol>5</defaultcontrol>
-    <onback>ReplaceWindow(Home)</onback>
+    <onback>ActivateWindow(Home)</onback>
     <controls>
         <include>Background</include>
 
