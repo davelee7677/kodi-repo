@@ -159,7 +159,7 @@
             </include>
             <include content="Button_Dialog" description="Check for Updates">
                 <param name="id">9501</param>
-                <param name="groupid">9501</param>
+                <param name="groupid">9321</param>
                 <param name="icon">special://skin/extras/icons/update.png</param>
                 <label>Check for Updates</label>
                 <visible>true</visible>
@@ -182,7 +182,7 @@
             </include>
             <include content="Button_Dialog" description="Reset Skin">
                 <param name="id">9502</param>
-                <param name="groupid">9502</param>
+                <param name="groupid">9322</param>
                 <param name="icon">special://skin/extras/icons/settings.png</param>
                 <label>Reset Skin</label>
                 <visible>true</visible>
