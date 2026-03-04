@@ -162,7 +162,7 @@
                 <param name="groupid">9501</param>
                 <param name="icon">special://skin/extras/icons/update.png</param>
                 <label>Check for Updates</label>
-                <visible>String.IsEqual(ListItem.AddonID,skin.polar.ascent)</visible>
+                <visible>String.IsEqual(ListItem.Label,Polar Ascent)</visible>
                 <onclick>UpdateAddonRepos</onclick>
                 <onclick>Notification(Polar Ascent,Checking for updates...,3000,special://skin/icon.png)</onclick>
             </include>
@@ -185,7 +185,7 @@
                 <param name="groupid">9502</param>
                 <param name="icon">special://skin/extras/icons/settings.png</param>
                 <label>Reset Skin</label>
-                <visible>String.IsEqual(ListItem.AddonID,skin.polar.ascent)</visible>
+                <visible>String.IsEqual(ListItem.Label,Polar Ascent)</visible>
                 <onclick>Skin.ResetSettings</onclick>
             </include>
             <include content="Button_Dialog" description="Dependencies">
