@@ -163,8 +163,8 @@
                 <param name="icon">special://skin/extras/icons/update.png</param>
                 <label>Check for Updates</label>
                 <visible>true</visible>
-                <onclick>UpdateAddonRepos</onclick>
-                <onclick>Notification(Polar Ascent,Checking for updates...,3000,special://skin/icon.png)</onclick>
+                
+                <onclick>InstallAddon(skin.polar.ascent)</onclick>
             </include>
             <include content="Button_Dialog" description="Update">
                 <param name="id">08</param>
