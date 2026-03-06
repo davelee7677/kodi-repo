@@ -9,6 +9,7 @@
     <onload condition="String.IsEmpty(Skin.String(Background.Image))">Skin.SetString(Background.Image,special://skin/extras/backgrounds/blur/polar_blur.jpg)</onload>
     <onload condition="String.IsEmpty(Skin.String(Background.DialogImage))">Skin.SetString(Background.DialogImage,Polar)</onload>
     <onload condition="!Skin.HasSetting(RevertSelectedText)">Skin.SetBool(RevertSelectedText)</onload>
+    <onload condition="String.IsEmpty(Skin.String(Background.Image))">Skin.Reset(focuscolor.name)</onload>
 
     <onunload>$VAR[Action_RatingsMonitor]</onunload>
 
