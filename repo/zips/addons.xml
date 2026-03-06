@@ -177,7 +177,7 @@
     <fanart>fanart.jpg</fanart>
   </assets>
 </extension>
-</addon><addon id="skin.polar.ascent" name="Polar Ascent" provider-name="flightrisk77" version="1.1.4">
+</addon><addon id="skin.polar.ascent" name="Polar Ascent" provider-name="flightrisk77" version="1.1.5">
     <requires>
         <import addon="xbmc.gui" version="5.17.0" />
         <import addon="resource.images.polar.ascent" version="1.0.0" />

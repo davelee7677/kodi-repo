@@ -6,6 +6,9 @@
 
     <!-- Set Some Profile Settings -->
     <onload condition="String.IsEmpty(Skin.String(Skin.SettingsLevel))">Skin.SetString(Skin.SettingsLevel,$NUMBER[3])</onload>
+    <onload condition="String.IsEmpty(Skin.String(Background.Image))">Skin.SetString(Background.Image,special://skin/extras/backgrounds/blur/polar_blur.jpg)</onload>
+    <onload condition="String.IsEmpty(Skin.String(Background.DialogImage))">Skin.SetString(Background.DialogImage,Polar)</onload>
+    <onload condition="!Skin.HasSetting(RevertSelectedText)">Skin.SetBool(RevertSelectedText)</onload>
 
     <onunload>$VAR[Action_RatingsMonitor]</onunload>
 
