@@ -157,15 +157,6 @@
                 <param name="istext">true</param>
                 <visible>Control.IsEnabled(13)</visible>
             </include>
-            <include content="Button_Dialog" description="Check for Updates">
-                <param name="id">9501</param>
-                <param name="groupid">9321</param>
-                <param name="icon">special://skin/extras/icons/update.png</param>
-                <label>Check for Updates</label>
-                <visible>true</visible>
-                
-                <onclick>InstallAddon(skin.polar.ascent)</onclick>
-            </include>
             <include content="Button_Dialog" description="Update">
                 <param name="id">08</param>
                 <param name="groupid">9308</param>
