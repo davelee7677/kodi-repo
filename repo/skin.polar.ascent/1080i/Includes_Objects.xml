@@ -725,7 +725,7 @@
                 <height>96</height>
                 <centerleft>50%</centerleft>
                 <aspectratio>keep</aspectratio>
-                <texture colordiffuse="main_logo">special://skin/extras/icons/kodi.png</texture>
+                <texture colordiffuse="main_fg_100">special://skin/extras/icons/kodi.png</texture>
             </control>
             <control type="label">
                 <height>32</height>
@@ -747,7 +747,7 @@
                 <width>auto</width>
                 <font>font_title_huge</font>
                 <textcolor>main_logo</textcolor>
-                <label>[COLOR=main_logo]Polar[/COLOR] Ascent</label>
+                <label>[COLOR=main_fg_100]Polar[/COLOR] Ascent</label>
             </control>
             <control type="label">
                 <aligny>center</aligny>
