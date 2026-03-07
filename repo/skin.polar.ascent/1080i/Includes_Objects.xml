@@ -725,11 +725,11 @@
                 <height>96</height>
                 <centerleft>50%</centerleft>
                 <aspectratio>keep</aspectratio>
-                <texture colordiffuse="main_fg_100">special://skin/extras/icons/kodi.png</texture>
+                <texture colordiffuse="main_logo">special://skin/extras/icons/kodi.png</texture>
             </control>
             <control type="label">
                 <height>32</height>
-                <textcolor>main_fg_100</textcolor>
+                <textcolor>main_logo</textcolor>
                 <label>KODI</label>
                 <font>font_logo_large</font>
                 <align>center</align>
