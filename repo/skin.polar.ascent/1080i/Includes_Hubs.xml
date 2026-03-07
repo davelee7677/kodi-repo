@@ -1005,7 +1005,7 @@
                     <height>40</height>
                     <aligny>center</aligny>
                     <align>center</align>
-                    <textcolor>main_logo</textcolor>
+                    <textcolor>main_fg_100</textcolor>
                     <label>$PARAM[label]...</label>
                 </control>
                 <include content="Furniture_Busy" condition="$PARAM[busyspinner]">
