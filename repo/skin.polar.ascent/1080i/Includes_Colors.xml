@@ -90,7 +90,7 @@
 
     <variable name="ColorSelected">
         <value condition="!Skin.HasSetting(RevertSelectedText)">ffffffff</value>
-        <value>1a1565c0</value>
+        <value>ffffffff</value>
     </variable>
     <variable name="ColorSelectedInverted">
         <value condition="!Skin.HasSetting(RevertSelectedText)">ffffffff</value>
