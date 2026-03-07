@@ -38,6 +38,7 @@
     <include name="defs_dialog_button">
         <textcolor>dialog_fg_70</textcolor>
         <selectedcolor>dialog_fg_70</selectedcolor>
+        <focusedcolor>main_fg_100</focusedcolor>
         <disabledcolor>dialog_fg_30</disabledcolor>
         <texturenofocus colordiffuse="$VAR[Color_DialogBorder]" border="40">common/menu.png</texturenofocus>
     </include>
