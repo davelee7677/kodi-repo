@@ -14,6 +14,7 @@
         ]
     },
     "actions": [
+        "sleep=2",
         [{
             "rules": [
                 "String.IsEmpty(Window.Property(ReloadDone))"],
