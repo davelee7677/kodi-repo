@@ -316,7 +316,7 @@
         <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),502) + !String.IsEmpty(Container(502).ListItem.Art(fanart))">$INFO[Container(502).ListItem.Art(fanart)]</value>
         <!-- Static global image if set, then blur default -->
         <value condition="!String.IsEmpty(Skin.String(Background.Image))">$INFO[Skin.String(Background.Image)]</value>
-        <value>special://skin/extras/backgrounds/blur/purle_blur.jpg</value>
+        <value>special://skin/extras/backgrounds/blur/polar_blur.jpg</value>
     </variable>
 
     <variable name="Image_OSD_Poster">
