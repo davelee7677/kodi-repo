@@ -599,8 +599,8 @@
             <param name="control">radiobutton</param>
             <param name="istext">true</param>
             <param name="label">$LOCALIZE[31220]</param>
-            <selected>Skin.String(Background.Image,special://skin/extras/backgrounds/blur/purple_blur.jpg) | String.IsEmpty(Skin.String(Background.Image))</selected>
-            <onclick>Skin.SetString(Background.Image,special://skin/extras/backgrounds/blur/purple_blur.jpg)</onclick>
+            <selected>Skin.String(Background.Image,special://home/addons/resource.images.polar.ascent/backgrounds/blur/purple_blur.jpg) | String.IsEmpty(Skin.String(Background.Image))</selected>
+            <onclick>Skin.SetString(Background.Image,special://home/addons/resource.images.polar.ascent/backgrounds/blur/purple_blur.jpg)</onclick>
             <onclick>RunScript(plugin.video.themoviedb.helper,blur_image=$VAR[Image_SimpleBackground],prefix=SimpleBackground)</onclick>
         </include>
         <include content="Button_Dialog_Setting">
@@ -610,8 +610,8 @@
             <param name="control">radiobutton</param>
             <param name="istext">true</param>
             <param name="label">$LOCALIZE[762]</param>
-            <selected>Skin.String(Background.Image,special://skin/extras/backgrounds/blur/blue_blur.jpg)</selected>
-            <onclick>Skin.SetString(Background.Image,special://skin/extras/backgrounds/blur/blue_blur.jpg)</onclick>
+            <selected>Skin.String(Background.Image,special://home/addons/resource.images.polar.ascent/backgrounds/blur/blue_blur.jpg)</selected>
+            <onclick>Skin.SetString(Background.Image,special://home/addons/resource.images.polar.ascent/backgrounds/blur/blue_blur.jpg)</onclick>
             <onclick>RunScript(plugin.video.themoviedb.helper,blur_image=$VAR[Image_SimpleBackground],prefix=SimpleBackground)</onclick>
         </include>
         <include content="Button_Dialog_Setting">
@@ -621,8 +621,8 @@
             <param name="control">radiobutton</param>
             <param name="istext">true</param>
             <param name="label">$LOCALIZE[31224]</param>
-            <selected>Skin.String(Background.Image,special://skin/extras/backgrounds/pink_blur.jpg)</selected>
-            <onclick>Skin.SetString(Background.Image,special://skin/extras/backgrounds/pink_blur.jpg)</onclick>
+            <selected>Skin.String(Background.Image,special://home/addons/resource.images.polar.ascent/backgrounds/blur/pink_blur.jpg)</selected>
+            <onclick>Skin.SetString(Background.Image,special://home/addons/resource.images.polar.ascent/backgrounds/blur/pink_blur.jpg)</onclick>
             <onclick>RunScript(plugin.video.themoviedb.helper,blur_image=$VAR[Image_SimpleBackground],prefix=SimpleBackground)</onclick>
         </include>
         <include content="Button_Dialog_Setting">
@@ -632,8 +632,8 @@
             <param name="control">radiobutton</param>
             <param name="istext">true</param>
             <param name="label">$LOCALIZE[13342]</param>
-            <selected>Skin.String(Background.Image,special://skin/extras/backgrounds/blur/orange_blur.jpg)</selected>
-            <onclick>Skin.SetString(Background.Image,special://skin/extras/backgrounds/blur/orange_blur.jpg)</onclick>
+            <selected>Skin.String(Background.Image,special://home/addons/resource.images.polar.ascent/backgrounds/blur/orange_blur.jpg)</selected>
+            <onclick>Skin.SetString(Background.Image,special://home/addons/resource.images.polar.ascent/backgrounds/blur/orange_blur.jpg)</onclick>
             <onclick>RunScript(plugin.video.themoviedb.helper,blur_image=$VAR[Image_SimpleBackground],prefix=SimpleBackground)</onclick>
         </include>
         <include content="Button_Dialog_Setting">
@@ -643,8 +643,8 @@
             <param name="control">radiobutton</param>
             <param name="istext">true</param>
             <param name="label">$LOCALIZE[31221]</param>
-            <selected>Skin.String(Background.Image,special://skin/extras/backgrounds/blur/slate_blur.jpg)</selected>
-            <onclick>Skin.SetString(Background.Image,special://skin/extras/backgrounds/blur/slate_blur.jpg)</onclick>
+            <selected>Skin.String(Background.Image,special://home/addons/resource.images.polar.ascent/backgrounds/blur/slate_blur.jpg)</selected>
+            <onclick>Skin.SetString(Background.Image,special://home/addons/resource.images.polar.ascent/backgrounds/blur/slate_blur.jpg)</onclick>
             <onclick>RunScript(plugin.video.themoviedb.helper,blur_image=$VAR[Image_SimpleBackground],prefix=SimpleBackground)</onclick>
         </include>
         <include content="Button_Dialog_Setting">
@@ -654,8 +654,8 @@
             <param name="control">radiobutton</param>
             <param name="istext">true</param>
             <param name="label">$LOCALIZE[31222]</param>
-            <selected>Skin.String(Background.Image,special://skin/extras/backgrounds/blur/coal_blur.jpg)</selected>
-            <onclick>Skin.SetString(Background.Image,special://skin/extras/backgrounds/blur/coal_blur.jpg)</onclick>
+            <selected>Skin.String(Background.Image,special://home/addons/resource.images.polar.ascent/backgrounds/blur/coal_blur.jpg)</selected>
+            <onclick>Skin.SetString(Background.Image,special://home/addons/resource.images.polar.ascent/backgrounds/blur/coal_blur.jpg)</onclick>
             <onclick>RunScript(plugin.video.themoviedb.helper,blur_image=$VAR[Image_SimpleBackground],prefix=SimpleBackground)</onclick>
         </include>
         <include content="Button_Dialog_Setting">
@@ -665,7 +665,7 @@
             <param name="control">radiobutton</param>
             <param name="istext">true</param>
             <param name="label">$LOCALIZE[636]</param>
-            <selected>!String.StartsWith(Skin.String(Background.Image),special://skin/extras/backgrounds/blur/) + !String.IsEmpty(Skin.String(Background.Image))</selected>
+            <selected>!String.StartsWith(Skin.String(Background.Image),special://home/addons/resource.images.polar.ascent/backgrounds/blur/) + !String.IsEmpty(Skin.String(Background.Image))</selected>
             <onclick>Skin.SetImage(Background.Image)</onclick>
             <onclick>RunScript(plugin.video.themoviedb.helper,blur_image=$VAR[Image_SimpleBackground],prefix=SimpleBackground)</onclick>
         </include>
@@ -714,7 +714,7 @@
             <param name="icon">special://skin/extras/icons/triangle-exclamation.png</param>
             <onclick>Close</onclick>
             <onclick>Skin.Reset(Startup.VideoPath)</onclick>
-            <onclick>Skin.SetString(Startup.ImageFolder,special://skin/extras/backgrounds/launch/)</onclick>
+            <onclick>Skin.SetString(Startup.ImageFolder,special://home/addons/resource.images.polar.ascent/backgrounds/launch/)</onclick>
         </include>
     </include>
 

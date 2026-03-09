@@ -19,7 +19,7 @@
 
     <variable name="Image_Blur_Fallback">
         <value condition="!String.IsEmpty(Skin.String(Background.Image))">$INFO[Skin.String(Background.Image)]</value>
-        <value>special://skin/extras/backgrounds/blur/purple_blur.jpg</value>
+        <value>special://home/addons/resource.images.polar.ascent/backgrounds/blur/purple_blur.jpg</value>
     </variable>
 
     <!-- Per-Hub Background Status Labels -->
@@ -282,15 +282,15 @@
     </variable>
 
     <variable name="Image_SimpleDialogBackground">
-        <value condition="Skin.String(Background.DialogImage,Blue)">special://skin/extras/backgrounds/dialogs/blue_blur.png</value>
-        <value condition="Skin.String(Background.DialogImage,Purple)">special://skin/extras/backgrounds/dialogs/purple_blur.png</value>
-        <value condition="Skin.String(Background.DialogImage,Pink)">special://skin/extras/backgrounds/dialogs/pink_blur.png</value>
-        <value condition="Skin.String(Background.DialogImage,Green)">special://skin/extras/backgrounds/dialogs/green_blur.png</value>
-        <value condition="Skin.String(Background.DialogImage,Slate)">special://skin/extras/backgrounds/dialogs/slate_blur.png</value>
-        <value condition="Skin.String(Background.DialogImage,Blush)">special://skin/extras/backgrounds/dialogs/blush_blur.png</value>
-        <value condition="Skin.String(Background.DialogImage,Coal)">special://skin/extras/backgrounds/dialogs/coal_blur.png</value>
-        <value condition="Skin.String(Background.DialogImage,Chalk)">special://skin/extras/backgrounds/dialogs/chalk_blur.png</value>
-        <value>special://skin/extras/backgrounds/dialogs/classic_blur.png</value>
+        <value condition="Skin.String(Background.DialogImage,Blue)">special://home/addons/resource.images.polar.ascent/backgrounds/dialogs/blue_blur.png</value>
+        <value condition="Skin.String(Background.DialogImage,Purple)">special://home/addons/resource.images.polar.ascent/backgrounds/dialogs/purple_blur.png</value>
+        <value condition="Skin.String(Background.DialogImage,Pink)">special://home/addons/resource.images.polar.ascent/backgrounds/dialogs/pink_blur.png</value>
+        <value condition="Skin.String(Background.DialogImage,Green)">special://home/addons/resource.images.polar.ascent/backgrounds/dialogs/green_blur.png</value>
+        <value condition="Skin.String(Background.DialogImage,Slate)">special://home/addons/resource.images.polar.ascent/backgrounds/dialogs/slate_blur.png</value>
+        <value condition="Skin.String(Background.DialogImage,Blush)">special://home/addons/resource.images.polar.ascent/backgrounds/dialogs/blush_blur.png</value>
+        <value condition="Skin.String(Background.DialogImage,Coal)">special://home/addons/resource.images.polar.ascent/backgrounds/dialogs/coal_blur.png</value>
+        <value condition="Skin.String(Background.DialogImage,Chalk)">special://home/addons/resource.images.polar.ascent/backgrounds/dialogs/chalk_blur.png</value>
+        <value>special://home/addons/resource.images.polar.ascent/backgrounds/dialogs/classic_blur.png</value>
     </variable>
 
     <variable name="Image_SimpleBackground">
@@ -304,7 +304,7 @@
         <value condition="[Control.HasFocus(3110) | Window.IsVisible(1110)] + !String.IsEmpty(Skin.String(Background.1110))">$INFO[Skin.String(Background.1110)]</value>
         <!-- Static global image if set, then polar blur default -->
         <value condition="!String.IsEmpty(Skin.String(Background.Image))">$INFO[Skin.String(Background.Image)]</value>
-        <value>special://skin/extras/backgrounds/blur/polar_blur.jpg</value>
+        <value>special://home/addons/resource.images.polar.ascent/backgrounds/blur/polar_blur.jpg</value>
     </variable>
 
     <variable name="Image_OSD_Poster">
@@ -408,7 +408,7 @@
         <value condition="!String.IsEmpty(ListItem.Art(artist.fanart))">$INFO[ListItem.Art(artist.fanart)]</value>
 
         <value condition="!String.IsEmpty(Skin.String(Startup.ImageFolder))">$INFO[Skin.String(Startup.ImageFolder)]</value>
-        <value>special://skin/extras/backgrounds/launch/</value>
+        <value>special://home/addons/resource.images.polar.ascent/backgrounds/launch/</value>
     </variable>
 
 
@@ -418,9 +418,9 @@
     </variable>
 
     <variable name="Image_StartUp">
-        <value condition="Weather.IsFetched + !String.IsEmpty(Weather.FanartCode) + System.HasAddon(resource.images.weatherfanart.multi) + [String.IsEmpty(Skin.String(Startup.ImageFolder)) | Skin.String(Startup.ImageFolder,special://skin/extras/backgrounds/launch/)]">resource://resource.images.weatherfanart.multi/$INFO[Weather.FanartCode]/</value>
+        <value condition="Weather.IsFetched + !String.IsEmpty(Weather.FanartCode) + System.HasAddon(resource.images.weatherfanart.multi) + [String.IsEmpty(Skin.String(Startup.ImageFolder)) | Skin.String(Startup.ImageFolder,special://home/addons/resource.images.polar.ascent/backgrounds/launch/)]">resource://resource.images.weatherfanart.multi/$INFO[Weather.FanartCode]/</value>
         <value condition="!String.IsEmpty(Skin.String(Startup.ImageFolder))">$INFO[Skin.String(Startup.ImageFolder)]</value>
-        <value>special://skin/extras/backgrounds/launch/</value>
+        <value>special://home/addons/resource.images.polar.ascent/backgrounds/launch/</value>
     </variable>
 
     <variable name="Image_PVRPoster">
