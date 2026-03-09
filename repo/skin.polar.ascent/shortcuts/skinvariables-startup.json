@@ -25,7 +25,6 @@
                         "!Skin.HasSetting(DefaultConfig.InitDone)"],
                     "value": [
                         "Skin.SetBool(TMDbHelper.EnableCrop)",
-                        "Skin.SetBool(TMDbHelper.EnableBlur)",
                         "Skin.SetBool(TMDbHelper.Service)",
                         "Skin.SetString(Background.DialogImage,Polar)",
                         "Skin.SetString(Background.Image,special://home/addons/resource.images.polar.ascent/backgrounds/blur/polar_blur.jpg)",
