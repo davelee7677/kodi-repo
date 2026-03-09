@@ -294,27 +294,6 @@
     </variable>
 
     <variable name="Image_SimpleBackground">
-        <!-- Per-Hub Custom Backgrounds - While inside hub OR hovering on menu button -->
-        <value condition="[Window.IsVisible(Home) + Control.HasFocus(3100) | Window.IsVisible(Home) + !Control.HasFocus(3101) + !Control.HasFocus(3102) + !Control.HasFocus(3103) + !Control.HasFocus(3104)] + !String.IsEmpty(Skin.String(Background.home))">$INFO[Skin.String(Background.home)]</value>
-        <value condition="[Control.HasFocus(3101) | Window.IsVisible(1101)] + !String.IsEmpty(Skin.String(Background.1101))">$INFO[Skin.String(Background.1101)]</value>
-        <value condition="[Control.HasFocus(3102) | Window.IsVisible(1102)] + !String.IsEmpty(Skin.String(Background.1102))">$INFO[Skin.String(Background.1102)]</value>
-        <value condition="[Control.HasFocus(3103) | Window.IsVisible(1103)] + !String.IsEmpty(Skin.String(Background.1103))">$INFO[Skin.String(Background.1103)]</value>
-        <value condition="[Control.HasFocus(3104) | Window.IsVisible(1104)] + !String.IsEmpty(Skin.String(Background.1104))">$INFO[Skin.String(Background.1104)]</value>
-        <value condition="[Control.HasFocus(3105) | Window.IsVisible(1105)] + !String.IsEmpty(Skin.String(Background.1105))">$INFO[Skin.String(Background.1105)]</value>
-        <value condition="[Control.HasFocus(3106) | Window.IsVisible(1106)] + !String.IsEmpty(Skin.String(Background.1106))">$INFO[Skin.String(Background.1106)]</value>
-        <value condition="[Control.HasFocus(3107) | Window.IsVisible(1107)] + !String.IsEmpty(Skin.String(Background.1107))">$INFO[Skin.String(Background.1107)]</value>
-        <value condition="[Control.HasFocus(3108) | Window.IsVisible(1108)] + !String.IsEmpty(Skin.String(Background.1108))">$INFO[Skin.String(Background.1108)]</value>
-        <value condition="[Control.HasFocus(3109) | Window.IsVisible(1109)] + !String.IsEmpty(Skin.String(Background.1109))">$INFO[Skin.String(Background.1109)]</value>
-        <value condition="[Control.HasFocus(3110) | Window.IsVisible(1110)] + !String.IsEmpty(Skin.String(Background.1110))">$INFO[Skin.String(Background.1110)]</value>
-        <value condition="[Control.HasFocus(3111) | Window.IsVisible(1111)] + !String.IsEmpty(Skin.String(Background.1111))">$INFO[Skin.String(Background.1111)]</value>
-
-        <!-- Global background fallback: fanart from focused widget item -->
-        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.BlurImage))">$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Current.BlurImage))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Current.BlurImage)]</value>
-        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),301) + !String.IsEmpty(Container(301).ListItem.Art(fanart))">$INFO[Container(301).ListItem.Art(fanart)]</value>
-        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),501) + !String.IsEmpty(Container(501).ListItem.Art(fanart))">$INFO[Container(501).ListItem.Art(fanart)]</value>
-        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),502) + !String.IsEmpty(Container(502).ListItem.Art(fanart))">$INFO[Container(502).ListItem.Art(fanart)]</value>
-        <!-- Static global image if set, then blur default -->
         <value condition="!String.IsEmpty(Skin.String(Background.Image))">$INFO[Skin.String(Background.Image)]</value>
         <value>special://skin/extras/backgrounds/blur/polar_blur.jpg</value>
     </variable>
