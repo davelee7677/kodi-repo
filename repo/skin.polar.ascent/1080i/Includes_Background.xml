@@ -92,12 +92,12 @@
         <definition>
             <control type="group">
                 <include>Background_NotVideo</include>
-                <include content="Background_Blur_Quadrants" condition="$EXP[Exp_TMDbHelper_IsBlur] + String.IsEmpty(Skin.String(Background.home)) + String.IsEmpty(Skin.String(Background.1101)) + String.IsEmpty(Skin.String(Background.1102)) + String.IsEmpty(Skin.String(Background.1103)) + String.IsEmpty(Skin.String(Background.1104)) + String.IsEmpty(Skin.String(Background.1109)) + String.IsEmpty(Skin.String(Background.1110)) + String.IsEmpty(Skin.String(Background.1111))">
+                <include content="Background_Blur_Quadrants" condition="$EXP[Exp_TMDbHelper_IsBlur]">
                     <param name="flixart_size_w">$PARAM[flixart_size_w]</param>
                     <param name="flixart_size_h">$PARAM[flixart_size_h]</param>
                     <param name="fadetime">$PARAM[fadetime]</param>
                 </include>
-                <include content="Background_Image" condition="!$EXP[Exp_TMDbHelper_IsBlur] | !String.IsEmpty(Skin.String(Background.home)) | !String.IsEmpty(Skin.String(Background.1101)) | !String.IsEmpty(Skin.String(Background.1102)) | !String.IsEmpty(Skin.String(Background.1103)) | !String.IsEmpty(Skin.String(Background.1104)) | !String.IsEmpty(Skin.String(Background.1109)) | !String.IsEmpty(Skin.String(Background.1110)) | !String.IsEmpty(Skin.String(Background.1111))">
+                <include content="Background_Image" condition="!$EXP[Exp_TMDbHelper_IsBlur]">
                     <param name="fadetime">$PARAM[fadetime]</param>
                 </include>
             </control>

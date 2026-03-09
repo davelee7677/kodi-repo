@@ -294,6 +294,15 @@
     </variable>
 
     <variable name="Image_SimpleBackground">
+        <!-- Per-Hub Custom Backgrounds -->
+        <value condition="[Window.IsVisible(Home) + Control.HasFocus(3100) | Window.IsVisible(Home) + !Control.HasFocus(3101) + !Control.HasFocus(3102) + !Control.HasFocus(3103) + !Control.HasFocus(3104)] + !String.IsEmpty(Skin.String(Background.home))">$INFO[Skin.String(Background.home)]</value>
+        <value condition="[Control.HasFocus(3101) | Window.IsVisible(1101)] + !String.IsEmpty(Skin.String(Background.1101))">$INFO[Skin.String(Background.1101)]</value>
+        <value condition="[Control.HasFocus(3102) | Window.IsVisible(1102)] + !String.IsEmpty(Skin.String(Background.1102))">$INFO[Skin.String(Background.1102)]</value>
+        <value condition="[Control.HasFocus(3103) | Window.IsVisible(1103)] + !String.IsEmpty(Skin.String(Background.1103))">$INFO[Skin.String(Background.1103)]</value>
+        <value condition="[Control.HasFocus(3104) | Window.IsVisible(1104)] + !String.IsEmpty(Skin.String(Background.1104))">$INFO[Skin.String(Background.1104)]</value>
+        <value condition="[Control.HasFocus(3109) | Window.IsVisible(1109)] + !String.IsEmpty(Skin.String(Background.1109))">$INFO[Skin.String(Background.1109)]</value>
+        <value condition="[Control.HasFocus(3110) | Window.IsVisible(1110)] + !String.IsEmpty(Skin.String(Background.1110))">$INFO[Skin.String(Background.1110)]</value>
+        <!-- Static global image if set, then polar blur default -->
         <value condition="!String.IsEmpty(Skin.String(Background.Image))">$INFO[Skin.String(Background.Image)]</value>
         <value>special://skin/extras/backgrounds/blur/polar_blur.jpg</value>
     </variable>
