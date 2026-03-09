@@ -57,10 +57,10 @@
     <include name="Background_Artwork">
         <param name="fadetime">background_fadetime</param>
         <definition>
-            <include content="Background_FlixArt" condition="$EXP[Exp_TMDbHelper_IsBlur] + String.IsEmpty(Skin.String(Background.home)) + String.IsEmpty(Skin.String(Background.1101)) + String.IsEmpty(Skin.String(Background.1102)) + String.IsEmpty(Skin.String(Background.1103)) + String.IsEmpty(Skin.String(Background.1104)) + String.IsEmpty(Skin.String(Background.1109)) + String.IsEmpty(Skin.String(Background.1110)) + String.IsEmpty(Skin.String(Background.1111))">
+            <include content="Background_FlixArt" condition="$EXP[Exp_TMDbHelper_IsBlur]">
                 <param name="fadetime">$PARAM[fadetime]</param>
             </include>
-            <include content="Background_FlixArt" condition="!$EXP[Exp_TMDbHelper_IsBlur] + String.IsEmpty(Skin.String(Background.home)) + String.IsEmpty(Skin.String(Background.1101)) + String.IsEmpty(Skin.String(Background.1102)) + String.IsEmpty(Skin.String(Background.1103)) + String.IsEmpty(Skin.String(Background.1104)) + String.IsEmpty(Skin.String(Background.1109)) + String.IsEmpty(Skin.String(Background.1110)) + String.IsEmpty(Skin.String(Background.1111))">
+            <include content="Background_FlixArt" condition="!$EXP[Exp_TMDbHelper_IsBlur]">
                 <param name="fadetime">$PARAM[fadetime]</param>
                 <param name="diffuse">diffuse/flixart/flixart_new.png</param>
             </include>
