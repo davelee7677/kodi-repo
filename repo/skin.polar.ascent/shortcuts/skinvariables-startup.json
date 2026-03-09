@@ -22,7 +22,7 @@
                 [{
                     "rules": [
                         "String.IsEmpty(Window.Property(ReloadDone))",
-                        "!Skin.HasSetting(DefaultConfig.InitDone)"],
+                        "!Skin.HasSetting(DefaultConfig.InitDone.1.4.0)"],
                     "value": [
                         "Skin.SetBool(TMDbHelper.EnableCrop)",
                         "Skin.SetBool(TMDbHelper.Service)",
@@ -34,7 +34,7 @@
                         "Skin.SetString(HomeSwitcher.Home.Spotlight.Label,Random Movies)",
                         "Skin.SetBool(RevertSelectedText)",
                         "Skin.Reset(focuscolor.name)",
-                        "Skin.SetBool(DefaultConfig.InitDone)"
+                        "Skin.SetBool(DefaultConfig.InitDone.1.4.0)"
                     ]
                 }],
                 "Skin.SetBool(TMDbHelper.UseLocalWidgetContainer)",
