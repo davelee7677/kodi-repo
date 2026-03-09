@@ -277,7 +277,7 @@
                 <include condition="!$PARAM[plain_background]">Background_Main_Standard</include>
             </control>
             <include>$PARAM[include_layer]</include>
-            <include condition="String.IsEmpty(Skin.String(Background.home)) + String.IsEmpty(Skin.String(Background.1101)) + String.IsEmpty(Skin.String(Background.1102)) + String.IsEmpty(Skin.String(Background.1103)) + String.IsEmpty(Skin.String(Background.1104)) + String.IsEmpty(Skin.String(Background.1109)) + String.IsEmpty(Skin.String(Background.1110)) + String.IsEmpty(Skin.String(Background.1111))">Background_Main_Overlay</include>
+            <include>Background_Main_Overlay</include>
             <include condition="Skin.HasSetting(EnableHolidayTheme) + Skin.HasSetting(HolidayMode.Frost)">Background_HolidayTheme_FrostOverlay</include>
         </definition>
     </include>
