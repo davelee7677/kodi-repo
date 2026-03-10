@@ -26,7 +26,7 @@
         <param name="fadetime">background_fadetime</param>
         <definition>
             <!-- No diffuse overlay when custom hub background is set -->
-            <control type="image" condition="!String.IsEmpty(Skin.String(Background.home)) | !String.IsEmpty(Skin.String(Background.1101)) | !String.IsEmpty(Skin.String(Background.1102)) | !String.IsEmpty(Skin.String(Background.1103)) | !String.IsEmpty(Skin.String(Background.1104)) | !String.IsEmpty(Skin.String(Background.1109)) | !String.IsEmpty(Skin.String(Background.1110)) | !String.IsEmpty(Skin.String(Background.1111))">
+            <control type="image" condition="!String.IsEmpty(Skin.String(Background.home)) | !String.IsEmpty(Skin.String(Background.1101)) | !String.IsEmpty(Skin.String(Background.1102)) | !String.IsEmpty(Skin.String(Background.1103)) | !String.IsEmpty(Skin.String(Background.1104)) | !String.IsEmpty(Skin.String(Background.1109)) | !String.IsEmpty(Skin.String(Background.1110)) | !String.IsEmpty(Skin.String(Background.1105)) | !String.IsEmpty(Skin.String(Background.1106)) | !String.IsEmpty(Skin.String(Background.1107)) | !String.IsEmpty(Skin.String(Background.1108)) | !String.IsEmpty(Skin.String(Background.1111))">
                 <fadetime>$PARAM[fadetime]</fadetime>
                 <right>$PARAM[right]</right>
                 <top>0</top>
@@ -39,7 +39,7 @@
                 <include>Background_NotVideo</include>
             </control>
             <!-- Normal diffuse overlay when no custom hub background -->
-            <control type="image" condition="String.IsEmpty(Skin.String(Background.home)) + String.IsEmpty(Skin.String(Background.1101)) + String.IsEmpty(Skin.String(Background.1102)) + String.IsEmpty(Skin.String(Background.1103)) + String.IsEmpty(Skin.String(Background.1104)) + String.IsEmpty(Skin.String(Background.1109)) + String.IsEmpty(Skin.String(Background.1110)) + String.IsEmpty(Skin.String(Background.1111))">
+            <control type="image" condition="String.IsEmpty(Skin.String(Background.home)) + String.IsEmpty(Skin.String(Background.1101)) + String.IsEmpty(Skin.String(Background.1102)) + String.IsEmpty(Skin.String(Background.1103)) + String.IsEmpty(Skin.String(Background.1104)) + String.IsEmpty(Skin.String(Background.1109)) + String.IsEmpty(Skin.String(Background.1110)) + String.IsEmpty(Skin.String(Background.1105)) + String.IsEmpty(Skin.String(Background.1106)) + String.IsEmpty(Skin.String(Background.1107)) + String.IsEmpty(Skin.String(Background.1108)) + String.IsEmpty(Skin.String(Background.1111))">
                 <fadetime>$PARAM[fadetime]</fadetime>
                 <right>$PARAM[right]</right>
                 <top>0</top>
