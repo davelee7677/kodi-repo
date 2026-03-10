@@ -282,6 +282,7 @@
     </variable>
 
     <variable name="Image_SimpleDialogBackground">
+        <value condition="Skin.String(Background.DialogImage,Polar)">special://home/addons/resource.images.polar.ascent/backgrounds/blur/polar_blur.jpg</value>
         <value condition="Skin.String(Background.DialogImage,Blue)">special://home/addons/resource.images.polar.ascent/backgrounds/dialogs/blue_blur.png</value>
         <value condition="Skin.String(Background.DialogImage,Purple)">special://home/addons/resource.images.polar.ascent/backgrounds/dialogs/purple_blur.png</value>
         <value condition="Skin.String(Background.DialogImage,Pink)">special://home/addons/resource.images.polar.ascent/backgrounds/dialogs/pink_blur.png</value>
@@ -408,7 +409,7 @@
         <value condition="!String.IsEmpty(ListItem.Art(artist.fanart))">$INFO[ListItem.Art(artist.fanart)]</value>
 
         <value condition="!String.IsEmpty(Skin.String(Startup.ImageFolder))">$INFO[Skin.String(Startup.ImageFolder)]</value>
-        <value>special://home/addons/resource.images.polar.ascent/backgrounds/launch/</value>
+        <value>special://skin/extras/backgrounds/launch/</value>
     </variable>
 
 
@@ -418,9 +419,9 @@
     </variable>
 
     <variable name="Image_StartUp">
-        <value condition="Weather.IsFetched + !String.IsEmpty(Weather.FanartCode) + System.HasAddon(resource.images.weatherfanart.multi) + [String.IsEmpty(Skin.String(Startup.ImageFolder)) | Skin.String(Startup.ImageFolder,special://home/addons/resource.images.polar.ascent/backgrounds/launch/)]">resource://resource.images.weatherfanart.multi/$INFO[Weather.FanartCode]/</value>
+        <value condition="Weather.IsFetched + !String.IsEmpty(Weather.FanartCode) + System.HasAddon(resource.images.weatherfanart.multi) + [String.IsEmpty(Skin.String(Startup.ImageFolder)) | Skin.String(Startup.ImageFolder,special://skin/extras/backgrounds/launch/)]">resource://resource.images.weatherfanart.multi/$INFO[Weather.FanartCode]/</value>
         <value condition="!String.IsEmpty(Skin.String(Startup.ImageFolder))">$INFO[Skin.String(Startup.ImageFolder)]</value>
-        <value>special://home/addons/resource.images.polar.ascent/backgrounds/launch/</value>
+        <value>special://skin/extras/backgrounds/launch/</value>
     </variable>
 
     <variable name="Image_PVRPoster">
@@ -430,7 +431,7 @@
     </variable>
 
     <variable name="Image_GenreIcon">
-        <value>$INFO[ListItem.Label,special://skin/media/genres/,.png]</value>
+        <value condition="FileExists($INFO[ListItem.Label,special://skin/media/genres/,.png])">$INFO[ListItem.Label,special://skin/media/genres/,.png]</value>
         <value condition="System.HasAddon(resource.images.moviegenreicons.transparent)">$INFO[ListItem.Label,genres/,.png]</value>
     </variable>
 
