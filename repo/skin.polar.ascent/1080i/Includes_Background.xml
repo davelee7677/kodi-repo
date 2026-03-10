@@ -108,7 +108,7 @@
         <param name="colordiffuse">main_back</param>
         <definition>
             <control type="image">
-                <texture colordiffuse="$VAR[ColorBackground]">common/white.png</texture>
+                <texture colordiffuse="0d000000">common/white.png</texture>
             </control>
             <control type="multiimage">
                 <imagepath>$VAR[Image_StartUp]</imagepath>
