@@ -303,6 +303,10 @@
         <value condition="[Control.HasFocus(3104) | Window.IsVisible(1104)] + !String.IsEmpty(Skin.String(Background.1104))">$INFO[Skin.String(Background.1104)]</value>
         <value condition="[Control.HasFocus(3109) | Window.IsVisible(1109)] + !String.IsEmpty(Skin.String(Background.1109))">$INFO[Skin.String(Background.1109)]</value>
         <value condition="[Control.HasFocus(3110) | Window.IsVisible(1110)] + !String.IsEmpty(Skin.String(Background.1110))">$INFO[Skin.String(Background.1110)]</value>
+        <value condition="[Control.HasFocus(3105) | Window.IsVisible(1105)] + !String.IsEmpty(Skin.String(Background.1105))">$INFO[Skin.String(Background.1105)]</value>
+        <value condition="[Control.HasFocus(3106) | Window.IsVisible(1106)] + !String.IsEmpty(Skin.String(Background.1106))">$INFO[Skin.String(Background.1106)]</value>
+        <value condition="[Control.HasFocus(3107) | Window.IsVisible(1107)] + !String.IsEmpty(Skin.String(Background.1107))">$INFO[Skin.String(Background.1107)]</value>
+        <value condition="[Control.HasFocus(3108) | Window.IsVisible(1108)] + !String.IsEmpty(Skin.String(Background.1108))">$INFO[Skin.String(Background.1108)]</value>
         <!-- Static global image if set, then polar blur default -->
         <value condition="!String.IsEmpty(Skin.String(Background.Image))">$INFO[Skin.String(Background.Image)]</value>
         <value>special://home/addons/resource.images.polar.ascent/backgrounds/blur/polar_blur.jpg</value>
