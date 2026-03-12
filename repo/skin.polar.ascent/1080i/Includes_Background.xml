@@ -25,21 +25,7 @@
         <param name="aspectratio">scale</param>
         <param name="fadetime">background_fadetime</param>
         <definition>
-            <!-- No diffuse overlay when custom hub background is set -->
-            <control type="image" condition="!String.IsEmpty(Skin.String(Background.home)) | !String.IsEmpty(Skin.String(Background.1101)) | !String.IsEmpty(Skin.String(Background.1102)) | !String.IsEmpty(Skin.String(Background.1103)) | !String.IsEmpty(Skin.String(Background.1104)) | !String.IsEmpty(Skin.String(Background.1109)) | !String.IsEmpty(Skin.String(Background.1110)) | !String.IsEmpty(Skin.String(Background.1105)) | !String.IsEmpty(Skin.String(Background.1106)) | !String.IsEmpty(Skin.String(Background.1107)) | !String.IsEmpty(Skin.String(Background.1108)) | !String.IsEmpty(Skin.String(Background.1111))">
-                <fadetime>$PARAM[fadetime]</fadetime>
-                <right>$PARAM[right]</right>
-                <top>0</top>
-                <height>$PARAM[flixart_size_h]</height>
-                <width>$PARAM[flixart_size_w]</width>
-                <aspectratio scalediffuse="false" align="$PARAM[align]" aligny="$PARAM[aligny]">$PARAM[aspectratio]</aspectratio>
-                <texture background="true">$VAR[Image_Foreground]</texture>
-                <animation effect="fade" start="100" end="0" reversible="false" time="300" condition="$EXP[Exp_BackgroundArtwork_IsHidden]">Conditional</animation>
-                <animation effect="fade" start="0" end="100" reversible="false" delay="300" time="background_fadetime" condition="!$EXP[Exp_BackgroundArtwork_IsHidden]">Conditional</animation>
-                <include>Background_NotVideo</include>
-            </control>
-            <!-- Normal diffuse overlay when no custom hub background -->
-            <control type="image" condition="String.IsEmpty(Skin.String(Background.home)) + String.IsEmpty(Skin.String(Background.1101)) + String.IsEmpty(Skin.String(Background.1102)) + String.IsEmpty(Skin.String(Background.1103)) + String.IsEmpty(Skin.String(Background.1104)) + String.IsEmpty(Skin.String(Background.1109)) + String.IsEmpty(Skin.String(Background.1110)) + String.IsEmpty(Skin.String(Background.1105)) + String.IsEmpty(Skin.String(Background.1106)) + String.IsEmpty(Skin.String(Background.1107)) + String.IsEmpty(Skin.String(Background.1108)) + String.IsEmpty(Skin.String(Background.1111))">
+            <control type="image">
                 <fadetime>$PARAM[fadetime]</fadetime>
                 <right>$PARAM[right]</right>
                 <top>0</top>
@@ -231,13 +217,10 @@
         <include condition="System.HasAddon(resource.images.arctic.waves)">Background_BusyLoader</include>
         <control type="image">
             <texture colordiffuse="$VAR[ColorBackground]">background/combined_flixart.png</texture>
-            <visible>![Window.IsVisible(Home) + !String.IsEmpty(Skin.String(Background.home))] + ![Window.IsVisible(1101) + !String.IsEmpty(Skin.String(Background.1101))] + ![Window.IsVisible(1102) + !String.IsEmpty(Skin.String(Background.1102))] + ![Window.IsVisible(1103) + !String.IsEmpty(Skin.String(Background.1103))] + ![Window.IsVisible(1104) + !String.IsEmpty(Skin.String(Background.1104))] + ![Window.IsVisible(1105) + !String.IsEmpty(Skin.String(Background.1105))] + ![Window.IsVisible(1106) + !String.IsEmpty(Skin.String(Background.1106))] + ![Window.IsVisible(1107) + !String.IsEmpty(Skin.String(Background.1107))] + ![Window.IsVisible(1108) + !String.IsEmpty(Skin.String(Background.1108))] + ![Window.IsVisible(1109) + !String.IsEmpty(Skin.String(Background.1109))] + ![Window.IsVisible(1110) + !String.IsEmpty(Skin.String(Background.1110))]</visible>
         </control>
         <control type="image">
             <texture colordiffuse="$VAR[ColorBackground]">background/combined_overlay.png</texture>
-
             <visible>$EXP[Exp_BackgroundArtwork_IsOverlay]</visible>
-
             <include content="Animation_Fade_In">
                 <param name="type">Visible</param>
             </include>
