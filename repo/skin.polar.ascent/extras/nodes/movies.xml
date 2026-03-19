@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node order="1">
+    <label>Movies</label>
+    <match>all</match>
+    <rule field="genre" operator="doesnotcontain">Horror</rule>
+    <order direction="ascending">title</order>
+    <content>movies</content>
+</node>
