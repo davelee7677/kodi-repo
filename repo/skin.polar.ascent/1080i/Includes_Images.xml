@@ -307,8 +307,12 @@
         <value condition="[Control.HasFocus(3106) | Window.IsVisible(1106)] + !String.IsEmpty(Skin.String(Background.1106))">$INFO[Skin.String(Background.1106)]</value>
         <value condition="[Control.HasFocus(3107) | Window.IsVisible(1107)] + !String.IsEmpty(Skin.String(Background.1107))">$INFO[Skin.String(Background.1107)]</value>
         <value condition="[Control.HasFocus(3108) | Window.IsVisible(1108)] + !String.IsEmpty(Skin.String(Background.1108))">$INFO[Skin.String(Background.1108)]</value>
-        <!-- Static global image if set, then polar blur default -->
+        <!-- Static global image if set -->
         <value condition="!String.IsEmpty(Skin.String(Background.Image))">$INFO[Skin.String(Background.Image)]</value>
+        <!-- Fanart fallback from library when no custom background is set -->
+        <value condition="!String.IsEmpty(Container.ListItem.Art(fanart))">$INFO[Container.ListItem.Art(fanart)]</value>
+        <value condition="!String.IsEmpty(Container.ListItem.Art(tvshow.fanart))">$INFO[Container.ListItem.Art(tvshow.fanart)]</value>
+        <!-- Polar blur default -->
         <value>special://home/addons/resource.images.polar.ascent/backgrounds/blur/polar_blur.jpg</value>
     </variable>
 
