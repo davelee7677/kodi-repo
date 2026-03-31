@@ -3,7 +3,7 @@
     <n>TV Shows No Horror</n>
     <match>all</match>
     <rule field="path" operator="startswith">
-        <value>nfs://192.168.4.77/volume1/Media/Dave's TV Shows/</value>
+        <value>nfs://192.168.4.77/volume2/Media2/Dave's TV Shows/</value>
     </rule>
     <order direction="ascending">title</order>
 </smartplaylist>
