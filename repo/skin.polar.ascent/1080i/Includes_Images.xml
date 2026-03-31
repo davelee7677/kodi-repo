@@ -24,62 +24,62 @@
 
     <!-- Per-Hub Background Status Labels -->
     <variable name="Info_BackgroundImage_Label_home">
-        <value condition="!String.IsEmpty(Skin.Image(Background.home))">[COLOR button_focus]Custom[/COLOR]</value>
+        <value condition="!String.IsEmpty(Skin.String(Background.home))">[COLOR button_focus]Custom[/COLOR]</value>
         <value>[COLOR dialog_fg_30]Using Global[/COLOR]</value>
     </variable>
 
     <variable name="Info_BackgroundImage_Label_1101">
-        <value condition="!String.IsEmpty(Skin.Image(Background.1101))">[COLOR button_focus]Custom[/COLOR]</value>
+        <value condition="!String.IsEmpty(Skin.String(Background.1101))">[COLOR button_focus]Custom[/COLOR]</value>
         <value>[COLOR dialog_fg_30]Using Global[/COLOR]</value>
     </variable>
 
     <variable name="Info_BackgroundImage_Label_1102">
-        <value condition="!String.IsEmpty(Skin.Image(Background.1102))">[COLOR button_focus]Custom[/COLOR]</value>
+        <value condition="!String.IsEmpty(Skin.String(Background.1102))">[COLOR button_focus]Custom[/COLOR]</value>
         <value>[COLOR dialog_fg_30]Using Global[/COLOR]</value>
     </variable>
 
     <variable name="Info_BackgroundImage_Label_1103">
-        <value condition="!String.IsEmpty(Skin.Image(Background.1103))">[COLOR button_focus]Custom[/COLOR]</value>
+        <value condition="!String.IsEmpty(Skin.String(Background.1103))">[COLOR button_focus]Custom[/COLOR]</value>
         <value>[COLOR dialog_fg_30]Using Global[/COLOR]</value>
     </variable>
 
     <variable name="Info_BackgroundImage_Label_1104">
-        <value condition="!String.IsEmpty(Skin.Image(Background.1104))">[COLOR button_focus]Custom[/COLOR]</value>
+        <value condition="!String.IsEmpty(Skin.String(Background.1104))">[COLOR button_focus]Custom[/COLOR]</value>
         <value>[COLOR dialog_fg_30]Using Global[/COLOR]</value>
     </variable>
 
     <variable name="Info_BackgroundImage_Label_1105">
-        <value condition="!String.IsEmpty(Skin.Image(Background.1105))">[COLOR button_focus]Custom[/COLOR]</value>
+        <value condition="!String.IsEmpty(Skin.String(Background.1105))">[COLOR button_focus]Custom[/COLOR]</value>
         <value>[COLOR dialog_fg_30]Using Global[/COLOR]</value>
     </variable>
 
     <variable name="Info_BackgroundImage_Label_1106">
-        <value condition="!String.IsEmpty(Skin.Image(Background.1106))">[COLOR button_focus]Custom[/COLOR]</value>
+        <value condition="!String.IsEmpty(Skin.String(Background.1106))">[COLOR button_focus]Custom[/COLOR]</value>
         <value>[COLOR dialog_fg_30]Using Global[/COLOR]</value>
     </variable>
 
     <variable name="Info_BackgroundImage_Label_1107">
-        <value condition="!String.IsEmpty(Skin.Image(Background.1107))">[COLOR button_focus]Custom[/COLOR]</value>
+        <value condition="!String.IsEmpty(Skin.String(Background.1107))">[COLOR button_focus]Custom[/COLOR]</value>
         <value>[COLOR dialog_fg_30]Using Global[/COLOR]</value>
     </variable>
 
     <variable name="Info_BackgroundImage_Label_1108">
-        <value condition="!String.IsEmpty(Skin.Image(Background.1108))">[COLOR button_focus]Custom[/COLOR]</value>
+        <value condition="!String.IsEmpty(Skin.String(Background.1108))">[COLOR button_focus]Custom[/COLOR]</value>
         <value>[COLOR dialog_fg_30]Using Global[/COLOR]</value>
     </variable>
 
     <variable name="Info_BackgroundImage_Label_1109">
-        <value condition="!String.IsEmpty(Skin.Image(Background.1109))">[COLOR button_focus]Custom[/COLOR]</value>
+        <value condition="!String.IsEmpty(Skin.String(Background.1109))">[COLOR button_focus]Custom[/COLOR]</value>
         <value>[COLOR dialog_fg_30]Using Global[/COLOR]</value>
     </variable>
 
     <variable name="Info_BackgroundImage_Label_1110">
-        <value condition="!String.IsEmpty(Skin.Image(Background.1110))">[COLOR button_focus]Custom[/COLOR]</value>
+        <value condition="!String.IsEmpty(Skin.String(Background.1110))">[COLOR button_focus]Custom[/COLOR]</value>
         <value>[COLOR dialog_fg_30]Using Global[/COLOR]</value>
     </variable>
 
     <variable name="Info_BackgroundImage_Label_1111">
-        <value condition="!String.IsEmpty(Skin.Image(Background.1111))">[COLOR button_focus]Custom[/COLOR]</value>
+        <value condition="!String.IsEmpty(Skin.String(Background.1111))">[COLOR button_focus]Custom[/COLOR]</value>
         <value>[COLOR dialog_fg_30]Using Global[/COLOR]</value>
     </variable>
     <variable name="Info_BackgroundBlur_Label_home">
@@ -356,17 +356,17 @@
 
     <variable name="Image_SimpleBackground">
         <!-- Per-Hub Custom Backgrounds -->
-        <value condition="[Window.IsVisible(Home) + Control.HasFocus(3100) | Window.IsVisible(Home) + !Control.HasFocus(3101) + !Control.HasFocus(3102) + !Control.HasFocus(3103) + !Control.HasFocus(3104)] + !String.IsEmpty(Skin.Image(Background.home))">$INFO[Skin.Image(Background.home)]</value>
-        <value condition="[Control.HasFocus(3101) | Window.IsVisible(1101)] + !String.IsEmpty(Skin.Image(Background.1101))">$INFO[Skin.Image(Background.1101)]</value>
-        <value condition="[Control.HasFocus(3102) | Window.IsVisible(1102)] + !String.IsEmpty(Skin.Image(Background.1102))">$INFO[Skin.Image(Background.1102)]</value>
-        <value condition="[Control.HasFocus(3103) | Window.IsVisible(1103)] + !String.IsEmpty(Skin.Image(Background.1103))">$INFO[Skin.Image(Background.1103)]</value>
-        <value condition="[Control.HasFocus(3104) | Window.IsVisible(1104)] + !String.IsEmpty(Skin.Image(Background.1104))">$INFO[Skin.Image(Background.1104)]</value>
-        <value condition="[Control.HasFocus(3109) | Window.IsVisible(1109)] + !String.IsEmpty(Skin.Image(Background.1109))">$INFO[Skin.Image(Background.1109)]</value>
-        <value condition="[Control.HasFocus(3110) | Window.IsVisible(1110)] + !String.IsEmpty(Skin.Image(Background.1110))">$INFO[Skin.Image(Background.1110)]</value>
-        <value condition="[Control.HasFocus(3105) | Window.IsVisible(1105)] + !String.IsEmpty(Skin.Image(Background.1105))">$INFO[Skin.Image(Background.1105)]</value>
-        <value condition="[Control.HasFocus(3106) | Window.IsVisible(1106)] + !String.IsEmpty(Skin.Image(Background.1106))">$INFO[Skin.Image(Background.1106)]</value>
-        <value condition="[Control.HasFocus(3107) | Window.IsVisible(1107)] + !String.IsEmpty(Skin.Image(Background.1107))">$INFO[Skin.Image(Background.1107)]</value>
-        <value condition="[Control.HasFocus(3108) | Window.IsVisible(1108)] + !String.IsEmpty(Skin.Image(Background.1108))">$INFO[Skin.Image(Background.1108)]</value>
+        <value condition="[Window.IsVisible(Home) + Control.HasFocus(3100) | Window.IsVisible(Home) + !Control.HasFocus(3101) + !Control.HasFocus(3102) + !Control.HasFocus(3103) + !Control.HasFocus(3104)] + !String.IsEmpty(Skin.String(Background.home))">$INFO[Skin.String(Background.home)]</value>
+        <value condition="[Control.HasFocus(3101) | Window.IsVisible(1101)] + !String.IsEmpty(Skin.String(Background.1101))">$INFO[Skin.String(Background.1101)]</value>
+        <value condition="[Control.HasFocus(3102) | Window.IsVisible(1102)] + !String.IsEmpty(Skin.String(Background.1102))">$INFO[Skin.String(Background.1102)]</value>
+        <value condition="[Control.HasFocus(3103) | Window.IsVisible(1103)] + !String.IsEmpty(Skin.String(Background.1103))">$INFO[Skin.String(Background.1103)]</value>
+        <value condition="[Control.HasFocus(3104) | Window.IsVisible(1104)] + !String.IsEmpty(Skin.String(Background.1104))">$INFO[Skin.String(Background.1104)]</value>
+        <value condition="[Control.HasFocus(3109) | Window.IsVisible(1109)] + !String.IsEmpty(Skin.String(Background.1109))">$INFO[Skin.String(Background.1109)]</value>
+        <value condition="[Control.HasFocus(3110) | Window.IsVisible(1110)] + !String.IsEmpty(Skin.String(Background.1110))">$INFO[Skin.String(Background.1110)]</value>
+        <value condition="[Control.HasFocus(3105) | Window.IsVisible(1105)] + !String.IsEmpty(Skin.String(Background.1105))">$INFO[Skin.String(Background.1105)]</value>
+        <value condition="[Control.HasFocus(3106) | Window.IsVisible(1106)] + !String.IsEmpty(Skin.String(Background.1106))">$INFO[Skin.String(Background.1106)]</value>
+        <value condition="[Control.HasFocus(3107) | Window.IsVisible(1107)] + !String.IsEmpty(Skin.String(Background.1107))">$INFO[Skin.String(Background.1107)]</value>
+        <value condition="[Control.HasFocus(3108) | Window.IsVisible(1108)] + !String.IsEmpty(Skin.String(Background.1108))">$INFO[Skin.String(Background.1108)]</value>
         <!-- Static global image if set -->
         <value condition="!String.IsEmpty(Skin.String(Background.Image))">$INFO[Skin.String(Background.Image)]</value>
         <!-- Fanart fallback from library when no custom background is set -->
