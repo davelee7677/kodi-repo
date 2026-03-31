@@ -73,7 +73,18 @@
             <right>0</right>
             <width>$PARAM[flixart_size_w]</width>
             <height>$PARAM[flixart_size_h]</height>
-            <control type="image">
+            <!-- Custom hub background: use raw path, oversized render provides blur effect -->
+            <control type="image" condition="(!String.IsEmpty(Skin.String(background.home))) | (!String.IsEmpty(Skin.String(background.1101))) | (!String.IsEmpty(Skin.String(background.1102))) | (!String.IsEmpty(Skin.String(background.1103))) | (!String.IsEmpty(Skin.String(background.1104))) | (!String.IsEmpty(Skin.String(background.1109))) | (!String.IsEmpty(Skin.String(background.1110)))">
+                <top>0</top>
+                <right>0</right>
+                <width>200%</width>
+                <height>200%</height>
+                <fadetime>$PARAM[fadetime]</fadetime>
+                <aspectratio>scale</aspectratio>
+                <texture background="true">$VAR[Image_SimpleBackground]</texture>
+            </control>
+            <!-- TMDbHelper blur path: no custom hub background set -->
+            <control type="image" condition="!((!String.IsEmpty(Skin.String(background.home))) | (!String.IsEmpty(Skin.String(background.1101))) | (!String.IsEmpty(Skin.String(background.1102))) | (!String.IsEmpty(Skin.String(background.1103))) | (!String.IsEmpty(Skin.String(background.1104))) | (!String.IsEmpty(Skin.String(background.1109))) | (!String.IsEmpty(Skin.String(background.1110))))">
                 <top>0</top>
                 <right>0</right>
                 <width>200%</width>
