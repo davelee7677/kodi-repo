@@ -537,7 +537,7 @@
             <param name="dialog">false</param>
             <param name="id">8005</param>
             <label>Background Blur</label>
-            <label2>$INFO[Skin.HasSetting(Background.Blur.$PARAM[window]),On,Off]</label2>
+            <label2>$VAR[Info_BackgroundBlur_Label_$PARAM[window]]</label2>
             <onclick condition="Skin.HasSetting(Background.Blur.$PARAM[window])">Skin.ResetSetting(Background.Blur.$PARAM[window])</onclick>
             <onclick condition="!Skin.HasSetting(Background.Blur.$PARAM[window])">Skin.SetSetting(Background.Blur.$PARAM[window])</onclick>
         </include>
