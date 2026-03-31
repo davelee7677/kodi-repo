@@ -52,15 +52,6 @@
 
             <!-- Build Shortcuts -->
             <include>Action_BuildShortcuts_OnLoad</include>
-
-            <!-- Seed TMDbHelper.SimpleBackground for per-hub custom backgrounds -->
-            <onload condition="Window.IsVisible(Home) + !String.IsEmpty(Skin.String(background.home))">Skin.SetString(TMDbHelper.SimpleBackground,$INFO[Skin.String(background.home)])</onload>
-            <onload condition="Window.IsVisible(1101) + !String.IsEmpty(Skin.String(background.1101))">Skin.SetString(TMDbHelper.SimpleBackground,$INFO[Skin.String(background.1101)])</onload>
-            <onload condition="Window.IsVisible(1102) + !String.IsEmpty(Skin.String(background.1102))">Skin.SetString(TMDbHelper.SimpleBackground,$INFO[Skin.String(background.1102)])</onload>
-            <onload condition="Window.IsVisible(1103) + !String.IsEmpty(Skin.String(background.1103))">Skin.SetString(TMDbHelper.SimpleBackground,$INFO[Skin.String(background.1103)])</onload>
-            <onload condition="Window.IsVisible(1104) + !String.IsEmpty(Skin.String(background.1104))">Skin.SetString(TMDbHelper.SimpleBackground,$INFO[Skin.String(background.1104)])</onload>
-            <onload condition="Window.IsVisible(1109) + !String.IsEmpty(Skin.String(background.1109))">Skin.SetString(TMDbHelper.SimpleBackground,$INFO[Skin.String(background.1109)])</onload>
-            <onload condition="Window.IsVisible(1110) + !String.IsEmpty(Skin.String(background.1110))">Skin.SetString(TMDbHelper.SimpleBackground,$INFO[Skin.String(background.1110)])</onload>
         </definition>
     </include>
 

@@ -606,8 +606,6 @@
                 <control type="button" id="$PARAM[id]">
                     <onclick>Dialog.Close(1183,true)</onclick>
                     <onclick>ReplaceWindow($PARAM[window])</onclick>
-                    <onfocus condition="!String.IsEmpty(Skin.String(background.$PARAM[window]))">Skin.SetString(TMDbHelper.SimpleBackground,$INFO[Skin.String(background.$PARAM[window])])</onfocus>
-                    <onfocus condition="String.IsEmpty(Skin.String(background.$PARAM[window]))">Skin.SetString(TMDbHelper.SimpleBackground,)</onfocus>
                     <texturenofocus />
                 </control>
                 <control type="group">
@@ -667,8 +665,6 @@
                 <centertop>50%</centertop>
                 <onclick>Dialog.Close(1183,true)</onclick>
                 <onclick>ReplaceWindow($PARAM[window])</onclick>
-                <onfocus condition="!String.IsEmpty(Skin.String(background.$PARAM[window]))">Skin.SetString(TMDbHelper.SimpleBackground,$INFO[Skin.String(background.$PARAM[window])])</onfocus>
-                <onfocus condition="String.IsEmpty(Skin.String(background.$PARAM[window]))">Skin.SetString(TMDbHelper.SimpleBackground,)</onfocus>
                 <include>Texture_Highlight_ToggleButton_FakeFocus_H</include>
                 <usealttexture>Window.IsVisible($PARAM[window]) + Integer.IsEqual(System.CurrentControlID,300)</usealttexture>
             </control>

@@ -25,21 +25,7 @@
         <param name="aspectratio">scale</param>
         <param name="fadetime">background_fadetime</param>
         <definition>
-            <!-- No diffuse: custom hub background is set AND blur is OFF for that hub -->
-            <control type="image" condition="(!String.IsEmpty(Skin.String(background.home)) + !Skin.HasSetting(background.blur.home)) | (!String.IsEmpty(Skin.String(background.1101)) + !Skin.HasSetting(background.blur.1101)) | (!String.IsEmpty(Skin.String(background.1102)) + !Skin.HasSetting(background.blur.1102)) | (!String.IsEmpty(Skin.String(background.1103)) + !Skin.HasSetting(background.blur.1103)) | (!String.IsEmpty(Skin.String(background.1104)) + !Skin.HasSetting(background.blur.1104)) | (!String.IsEmpty(Skin.String(background.1105)) + !Skin.HasSetting(background.blur.1105)) | (!String.IsEmpty(Skin.String(background.1106)) + !Skin.HasSetting(background.blur.1106)) | (!String.IsEmpty(Skin.String(background.1107)) + !Skin.HasSetting(background.blur.1107)) | (!String.IsEmpty(Skin.String(background.1108)) + !Skin.HasSetting(background.blur.1108)) | (!String.IsEmpty(Skin.String(background.1109)) + !Skin.HasSetting(background.blur.1109)) | (!String.IsEmpty(Skin.String(background.1110)) + !Skin.HasSetting(background.blur.1110)) | (!String.IsEmpty(Skin.String(background.1111)) + !Skin.HasSetting(background.blur.1111))">
-                <fadetime>$PARAM[fadetime]</fadetime>
-                <right>$PARAM[right]</right>
-                <top>0</top>
-                <height>$PARAM[flixart_size_h]</height>
-                <width>$PARAM[flixart_size_w]</width>
-                <aspectratio scalediffuse="false" align="$PARAM[align]" aligny="$PARAM[aligny]">$PARAM[aspectratio]</aspectratio>
-                <texture background="true">$VAR[Image_Foreground]</texture>
-                <animation effect="fade" start="100" end="0" reversible="false" time="300" condition="$EXP[Exp_BackgroundArtwork_IsHidden]">Conditional</animation>
-                <animation effect="fade" start="0" end="100" reversible="false" delay="300" time="background_fadetime" condition="!$EXP[Exp_BackgroundArtwork_IsHidden]">Conditional</animation>
-                <include>Background_NotVideo</include>
-            </control>
-            <!-- With diffuse: no custom background, or custom background with blur ON -->
-            <control type="image" condition="![(!String.IsEmpty(Skin.String(background.home)) + !Skin.HasSetting(background.blur.home)) | (!String.IsEmpty(Skin.String(background.1101)) + !Skin.HasSetting(background.blur.1101)) | (!String.IsEmpty(Skin.String(background.1102)) + !Skin.HasSetting(background.blur.1102)) | (!String.IsEmpty(Skin.String(background.1103)) + !Skin.HasSetting(background.blur.1103)) | (!String.IsEmpty(Skin.String(background.1104)) + !Skin.HasSetting(background.blur.1104)) | (!String.IsEmpty(Skin.String(background.1105)) + !Skin.HasSetting(background.blur.1105)) | (!String.IsEmpty(Skin.String(background.1106)) + !Skin.HasSetting(background.blur.1106)) | (!String.IsEmpty(Skin.String(background.1107)) + !Skin.HasSetting(background.blur.1107)) | (!String.IsEmpty(Skin.String(background.1108)) + !Skin.HasSetting(background.blur.1108)) | (!String.IsEmpty(Skin.String(background.1109)) + !Skin.HasSetting(background.blur.1109)) | (!String.IsEmpty(Skin.String(background.1110)) + !Skin.HasSetting(background.blur.1110)) | (!String.IsEmpty(Skin.String(background.1111)) + !Skin.HasSetting(background.blur.1111))]">
+            <control type="image">
                 <fadetime>$PARAM[fadetime]</fadetime>
                 <right>$PARAM[right]</right>
                 <top>0</top>
@@ -92,17 +78,11 @@
         <definition>
             <control type="group">
                 <include>Background_NotVideo</include>
-                <!-- Per-hub blur OFF: show raw image even when global blur is ON -->
-                <include content="Background_Image" condition="$EXP[Exp_TMDbHelper_IsBlur] + ([Window.IsVisible(Home) + !String.IsEmpty(Skin.String(background.home)) + !Skin.HasSetting(background.blur.home)] | [Window.IsVisible(1101) + !String.IsEmpty(Skin.String(background.1101)) + !Skin.HasSetting(background.blur.1101)] | [Window.IsVisible(1102) + !String.IsEmpty(Skin.String(background.1102)) + !Skin.HasSetting(background.blur.1102)] | [Window.IsVisible(1103) + !String.IsEmpty(Skin.String(background.1103)) + !Skin.HasSetting(background.blur.1103)] | [Window.IsVisible(1104) + !String.IsEmpty(Skin.String(background.1104)) + !Skin.HasSetting(background.blur.1104)] | [Window.IsVisible(1109) + !String.IsEmpty(Skin.String(background.1109)) + !Skin.HasSetting(background.blur.1109)] | [Window.IsVisible(1110) + !String.IsEmpty(Skin.String(background.1110)) + !Skin.HasSetting(background.blur.1110)])">
-                    <param name="fadetime">$PARAM[fadetime]</param>
-                </include>
-                <!-- Global blur ON, per-hub blur ON or no custom bg: normal TMDbHelper blur -->
-                <include content="Background_Blur_Quadrants" condition="$EXP[Exp_TMDbHelper_IsBlur] + !([Window.IsVisible(Home) + !String.IsEmpty(Skin.String(background.home)) + !Skin.HasSetting(background.blur.home)] | [Window.IsVisible(1101) + !String.IsEmpty(Skin.String(background.1101)) + !Skin.HasSetting(background.blur.1101)] | [Window.IsVisible(1102) + !String.IsEmpty(Skin.String(background.1102)) + !Skin.HasSetting(background.blur.1102)] | [Window.IsVisible(1103) + !String.IsEmpty(Skin.String(background.1103)) + !Skin.HasSetting(background.blur.1103)] | [Window.IsVisible(1104) + !String.IsEmpty(Skin.String(background.1104)) + !Skin.HasSetting(background.blur.1104)] | [Window.IsVisible(1109) + !String.IsEmpty(Skin.String(background.1109)) + !Skin.HasSetting(background.blur.1109)] | [Window.IsVisible(1110) + !String.IsEmpty(Skin.String(background.1110)) + !Skin.HasSetting(background.blur.1110)])">
+                <include content="Background_Blur_Quadrants" condition="$EXP[Exp_TMDbHelper_IsBlur]">
                     <param name="flixart_size_w">$PARAM[flixart_size_w]</param>
                     <param name="flixart_size_h">$PARAM[flixart_size_h]</param>
                     <param name="fadetime">$PARAM[fadetime]</param>
                 </include>
-                <!-- Global blur OFF: always use raw image -->
                 <include content="Background_Image" condition="!$EXP[Exp_TMDbHelper_IsBlur]">
                     <param name="fadetime">$PARAM[fadetime]</param>
                 </include>
@@ -237,8 +217,7 @@
         <include condition="System.HasAddon(resource.images.arctic.waves)">Background_BusyLoader</include>
         <control type="image">
             <!-- Hide combined_flixart overlay when a custom hub background is active -->
-            <!-- Hide overlay when custom bg is set AND blur is OFF for that hub -->
-            <visible>![(!String.IsEmpty(Skin.String(background.home)) + !Skin.HasSetting(background.blur.home)) | (!String.IsEmpty(Skin.String(background.1101)) + !Skin.HasSetting(background.blur.1101)) | (!String.IsEmpty(Skin.String(background.1102)) + !Skin.HasSetting(background.blur.1102)) | (!String.IsEmpty(Skin.String(background.1103)) + !Skin.HasSetting(background.blur.1103)) | (!String.IsEmpty(Skin.String(background.1104)) + !Skin.HasSetting(background.blur.1104)) | (!String.IsEmpty(Skin.String(background.1105)) + !Skin.HasSetting(background.blur.1105)) | (!String.IsEmpty(Skin.String(background.1106)) + !Skin.HasSetting(background.blur.1106)) | (!String.IsEmpty(Skin.String(background.1107)) + !Skin.HasSetting(background.blur.1107)) | (!String.IsEmpty(Skin.String(background.1108)) + !Skin.HasSetting(background.blur.1108)) | (!String.IsEmpty(Skin.String(background.1109)) + !Skin.HasSetting(background.blur.1109)) | (!String.IsEmpty(Skin.String(background.1110)) + !Skin.HasSetting(background.blur.1110)) | (!String.IsEmpty(Skin.String(background.1111)) + !Skin.HasSetting(background.blur.1111))]</visible>
+            <visible>!(!String.IsEmpty(Skin.Image(Background.home)) | !String.IsEmpty(Skin.Image(Background.1101)) | !String.IsEmpty(Skin.Image(Background.1102)) | !String.IsEmpty(Skin.Image(Background.1103)) | !String.IsEmpty(Skin.Image(Background.1104)) | !String.IsEmpty(Skin.Image(Background.1105)) | !String.IsEmpty(Skin.Image(Background.1106)) | !String.IsEmpty(Skin.Image(Background.1107)) | !String.IsEmpty(Skin.Image(Background.1108)) | !String.IsEmpty(Skin.Image(Background.1109)) | !String.IsEmpty(Skin.Image(Background.1110)) | !String.IsEmpty(Skin.Image(Background.1111)))</visible>
             <texture colordiffuse="$VAR[ColorBackground]">background/combined_flixart.png</texture>
         </control>
         <control type="image">
