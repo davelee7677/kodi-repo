@@ -533,6 +533,13 @@
             <label2>$VAR[Info_BackgroundImage_Label_$PARAM[window]]</label2>
             <onclick>Skin.SetImage(Background.$PARAM[window])</onclick>
         </include>
+        <include content="Settings_Button" description="Background Blur">
+            <param name="dialog">false</param>
+            <param name="id">8005</param>
+            <label>Background Blur</label>
+            <label2>$INFO[Skin.HasSetting(Background.Blur.$PARAM[window]),On,Off]</label2>
+            <onclick>Skin.ToggleSetting(Background.Blur.$PARAM[window])</onclick>
+        </include>
     </include>
 
     <include name="DialogCustom_Shortcuts_Items_SpotlightConfigure">
