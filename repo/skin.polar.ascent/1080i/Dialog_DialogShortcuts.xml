@@ -531,7 +531,7 @@
             <param name="id">8004</param>
             <label>Background Image</label>
             <label2>$VAR[Info_BackgroundImage_Label_$PARAM[window]]</label2>
-            <onclick>Skin.SetImage(Background.$PARAM[window])</onclick>
+            <onclick>Skin.SetImage(background.$PARAM[window])</onclick>
         </include>
         <include content="Settings_Button" description="Background Blur" condition="String.IsEqual(Window(Home).Property(Dialog.1124.Window),HomeSwitcher.home)">
             <param name="dialog">false</param>
