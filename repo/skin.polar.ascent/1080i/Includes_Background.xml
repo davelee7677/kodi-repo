@@ -73,18 +73,7 @@
             <right>0</right>
             <width>$PARAM[flixart_size_w]</width>
             <height>$PARAM[flixart_size_h]</height>
-            <!-- Custom hub background: use raw path, oversized render provides blur effect -->
-            <control type="image" condition="(!String.IsEmpty(Skin.String(background.home))) | (!String.IsEmpty(Skin.String(background.1101))) | (!String.IsEmpty(Skin.String(background.1102))) | (!String.IsEmpty(Skin.String(background.1103))) | (!String.IsEmpty(Skin.String(background.1104))) | (!String.IsEmpty(Skin.String(background.1109))) | (!String.IsEmpty(Skin.String(background.1110)))">
-                <top>0</top>
-                <right>0</right>
-                <width>200%</width>
-                <height>200%</height>
-                <fadetime>$PARAM[fadetime]</fadetime>
-                <aspectratio>scale</aspectratio>
-                <texture background="true">$VAR[Image_SimpleBackground]</texture>
-            </control>
-            <!-- TMDbHelper blur path: no custom hub background set -->
-            <control type="image" condition="!((!String.IsEmpty(Skin.String(background.home))) | (!String.IsEmpty(Skin.String(background.1101))) | (!String.IsEmpty(Skin.String(background.1102))) | (!String.IsEmpty(Skin.String(background.1103))) | (!String.IsEmpty(Skin.String(background.1104))) | (!String.IsEmpty(Skin.String(background.1109))) | (!String.IsEmpty(Skin.String(background.1110))))">
+            <control type="image">
                 <top>0</top>
                 <right>0</right>
                 <width>200%</width>
@@ -103,11 +92,17 @@
         <definition>
             <control type="group">
                 <include>Background_NotVideo</include>
-                <include content="Background_Blur_Quadrants" condition="$EXP[Exp_TMDbHelper_IsBlur]">
+                <!-- Per-hub blur OFF: show raw image even when global blur is ON -->
+                <include content="Background_Image" condition="$EXP[Exp_TMDbHelper_IsBlur] + ([Window.IsVisible(Home) + !String.IsEmpty(Skin.String(background.home)) + !Skin.HasSetting(background.blur.home)] | [Window.IsVisible(1101) + !String.IsEmpty(Skin.String(background.1101)) + !Skin.HasSetting(background.blur.1101)] | [Window.IsVisible(1102) + !String.IsEmpty(Skin.String(background.1102)) + !Skin.HasSetting(background.blur.1102)] | [Window.IsVisible(1103) + !String.IsEmpty(Skin.String(background.1103)) + !Skin.HasSetting(background.blur.1103)] | [Window.IsVisible(1104) + !String.IsEmpty(Skin.String(background.1104)) + !Skin.HasSetting(background.blur.1104)] | [Window.IsVisible(1109) + !String.IsEmpty(Skin.String(background.1109)) + !Skin.HasSetting(background.blur.1109)] | [Window.IsVisible(1110) + !String.IsEmpty(Skin.String(background.1110)) + !Skin.HasSetting(background.blur.1110)])">
+                    <param name="fadetime">$PARAM[fadetime]</param>
+                </include>
+                <!-- Global blur ON, per-hub blur ON or no custom bg: normal TMDbHelper blur -->
+                <include content="Background_Blur_Quadrants" condition="$EXP[Exp_TMDbHelper_IsBlur] + !([Window.IsVisible(Home) + !String.IsEmpty(Skin.String(background.home)) + !Skin.HasSetting(background.blur.home)] | [Window.IsVisible(1101) + !String.IsEmpty(Skin.String(background.1101)) + !Skin.HasSetting(background.blur.1101)] | [Window.IsVisible(1102) + !String.IsEmpty(Skin.String(background.1102)) + !Skin.HasSetting(background.blur.1102)] | [Window.IsVisible(1103) + !String.IsEmpty(Skin.String(background.1103)) + !Skin.HasSetting(background.blur.1103)] | [Window.IsVisible(1104) + !String.IsEmpty(Skin.String(background.1104)) + !Skin.HasSetting(background.blur.1104)] | [Window.IsVisible(1109) + !String.IsEmpty(Skin.String(background.1109)) + !Skin.HasSetting(background.blur.1109)] | [Window.IsVisible(1110) + !String.IsEmpty(Skin.String(background.1110)) + !Skin.HasSetting(background.blur.1110)])">
                     <param name="flixart_size_w">$PARAM[flixart_size_w]</param>
                     <param name="flixart_size_h">$PARAM[flixart_size_h]</param>
                     <param name="fadetime">$PARAM[fadetime]</param>
                 </include>
+                <!-- Global blur OFF: always use raw image -->
                 <include content="Background_Image" condition="!$EXP[Exp_TMDbHelper_IsBlur]">
                     <param name="fadetime">$PARAM[fadetime]</param>
                 </include>

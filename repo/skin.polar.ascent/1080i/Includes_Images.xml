@@ -395,6 +395,8 @@
     </variable>
 
     <variable name="Image_Background">
+        <!-- Per-hub custom background: feed through TMDbHelper SimpleBackground blur -->
+        <value condition="[Window.IsVisible(Home) + !String.IsEmpty(Skin.String(background.home))] | [Window.IsVisible(1101) + !String.IsEmpty(Skin.String(background.1101))] | [Window.IsVisible(1102) + !String.IsEmpty(Skin.String(background.1102))] | [Window.IsVisible(1103) + !String.IsEmpty(Skin.String(background.1103))] | [Window.IsVisible(1104) + !String.IsEmpty(Skin.String(background.1104))] | [Window.IsVisible(1109) + !String.IsEmpty(Skin.String(background.1109))] | [Window.IsVisible(1110) + !String.IsEmpty(Skin.String(background.1110))]">$INFO[Window(Home).Property(TMDbHelper.SimpleBackground.BlurImage)]</value>
         <value condition="$EXP[Exp_BackgroundArtwork_IsSimple]">$INFO[Window(Home).Property(TMDbHelper.SimpleBackground.BlurImage)]</value>
         <value condition="!String.IsEmpty(Window.Property(TMDbHelper.ListItem.BlurImage))">$INFO[Window.Property(TMDbHelper.ListItem.BlurImage)]</value>
         <value>$INFO[Window(Home).Property(TMDbHelper.ListItem.Current.BlurImage)]</value>
