@@ -43,12 +43,8 @@
     <include name="Background_Artwork">
         <param name="fadetime">background_fadetime</param>
         <definition>
-            <include content="Background_FlixArt" condition="$EXP[Exp_TMDbHelper_IsBlur]">
+            <include content="Background_FlixArt">
                 <param name="fadetime">$PARAM[fadetime]</param>
-            </include>
-            <include content="Background_FlixArt" condition="!$EXP[Exp_TMDbHelper_IsBlur]">
-                <param name="fadetime">$PARAM[fadetime]</param>
-                <param name="diffuse">diffuse/flixart/flixart_new.png</param>
             </include>
         </definition>
     </include>
@@ -66,7 +62,7 @@
                 <height>200%</height>
                 <fadetime>$PARAM[fadetime]</fadetime>
                 <aspectratio>scale</aspectratio>
-                <texture background="true">$VAR[Image_Background,,-tiled.jpg]</texture>
+                <texture background="true">$VAR[Image_SimpleBackground]</texture>
             </control>
         </control>
     </include>
@@ -94,7 +90,7 @@
         <param name="colordiffuse">main_back</param>
         <definition>
             <control type="image">
-                <texture colordiffuse="$VAR[ColorBackground]">common/white.png</texture>
+                <texture colordiffuse="33000000">common/white.png</texture>
             </control>
             <control type="multiimage">
                 <imagepath colordiffuse="$PARAM[colordiffuse]">$VAR[Image_StartUp]</imagepath>
