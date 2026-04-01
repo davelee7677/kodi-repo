@@ -4,7 +4,6 @@
         <param name="defaultcontrol">10000</param>
     </include>
 
-    <!-- Set Some Profile Settings -->
     <onload condition="String.IsEmpty(Skin.String(Skin.SettingsLevel))">Skin.SetString(Skin.SettingsLevel,$NUMBER[3])</onload>
     <onload condition="String.IsEmpty(Skin.String(Background.Image))">Skin.SetString(Background.Image,special://home/addons/resource.images.polar.ascent/backgrounds/blur/polar_blur.jpg)</onload>
     <onload condition="String.IsEmpty(Skin.String(Background.DialogImage))">Skin.SetString(Background.DialogImage,Polar)</onload>
@@ -14,7 +13,6 @@
     <onunload>$VAR[Action_RatingsMonitor]</onunload>
 
     <controls>
-
 
         <include>Background</include>
 
@@ -28,39 +26,56 @@
                             <pagecontrol>61</pagecontrol>
                             <right>40</right>
                             <content>
-                                <item id="0" description="Customise">
+                                <item id="0">
+                                    <description>Customise</description>
                                     <label>$LOCALIZE[31444]</label>
                                     <label2>$LOCALIZE[31448] [LOWERCASE]$LOCALIZE[31103], $LOCALIZE[31177], $LOCALIZE[31487] $LOCALIZE[31150][/LOWERCASE].</label2>
+                                    <onclick>SetFocus(10001)</onclick>
                                 </item>
-                                <item id="1" description="Appearance">
+                                <item id="1">
+                                    <description>Appearance</description>
                                     <label>$LOCALIZE[480]</label>
                                     <label2>$LOCALIZE[31448] [LOWERCASE]$LOCALIZE[14078], $LOCALIZE[33068], $LOCALIZE[31487] $LOCALIZE[31486][/LOWERCASE].</label2>
+                                    <onclick>SetFocus(10001)</onclick>
                                 </item>
-                                <item id="2" description="Interface">
+                                <item id="2">
+                                    <description>Interface</description>
                                     <label>$LOCALIZE[14206]</label>
                                     <label2>$LOCALIZE[31448] [LOWERCASE]$LOCALIZE[19033] $LOCALIZE[736], $LOCALIZE[31208], $LOCALIZE[31487] $LOCALIZE[31239][/LOWERCASE].</label2>
+                                    <onclick>SetFocus(10001)</onclick>
                                 </item>
-                                <item id="3" description="Details">
+                                <item id="3">
+                                    <description>Details</description>
                                     <label>$LOCALIZE[33029]</label>
                                     <label2>$LOCALIZE[31448] [LOWERCASE]$LOCALIZE[19033] $LOCALIZE[20459], $LOCALIZE[126], $LOCALIZE[31202], $LOCALIZE[31487] $LOCALIZE[31235][/LOWERCASE].</label2>
+                                    <onclick>SetFocus(10001)</onclick>
                                 </item>
-                                <item id="4" description="Layout">
+                                <item id="4">
+                                    <description>Layout</description>
                                     <label>$LOCALIZE[31158]</label>
                                     <label2>$LOCALIZE[31448] [LOWERCASE]$LOCALIZE[31044], $LOCALIZE[31487] $LOCALIZE[31103][/LOWERCASE].</label2>
+                                    <onclick>SetFocus(10001)</onclick>
                                 </item>
-                                <item id="5" description="Behaviour">
+                                <item id="5">
+                                    <description>Behaviour</description>
                                     <label>$LOCALIZE[31186]</label>
                                     <label2>$LOCALIZE[31448] [LOWERCASE]$LOCALIZE[31174], $LOCALIZE[31185], $LOCALIZE[478], $LOCALIZE[31297], $LOCALIZE[31487] $LOCALIZE[31482][/LOWERCASE].</label2>
+                                    <onclick>SetFocus(10001)</onclick>
                                 </item>
-                                <item id="6" description="Other">
+                                <item id="6">
+                                    <description>Other</description>
                                     <label>$LOCALIZE[29921]</label>
                                     <label2>$LOCALIZE[31448] [LOWERCASE]$LOCALIZE[14125], $LOCALIZE[12999], $LOCALIZE[31487] $LOCALIZE[13200][/LOWERCASE].</label2>
+                                    <onclick>SetFocus(10001)</onclick>
                                 </item>
-                                <item id="7" description="Dependencies">
+                                <item id="7">
+                                    <description>Dependencies</description>
                                     <label>$LOCALIZE[39024]</label>
                                     <label2>$LOCALIZE[31448] [LOWERCASE]$LOCALIZE[39024] $LOCALIZE[31487] $LOCALIZE[14260][/LOWERCASE].</label2>
+                                    <onclick>SetFocus(10001)</onclick>
                                 </item>
-                                <item id="8" description="Thanks">
+                                <item id="8">
+                                    <description>Thanks</description>
                                     <label>$VAR[Label_SkinSettings_Level]</label>
                                     <label2>$LOCALIZE[31550]</label2>
                                     <onclick condition="Integer.IsEqual(Skin.String(Skin.SettingsLevel),1)">Skin.SetString(Skin.SettingsLevel,$NUMBER[2])</onclick>
@@ -87,8 +102,8 @@
                         </control>
                     </include>
                 </include>
-                <include content="Settings_Right_Group">
 
+                <include content="Settings_Right_Group">
                     <control type="scrollbar" id="60">
                         <centerright>0</centerright>
                         <bottom>20</bottom>
@@ -101,45 +116,23 @@
                         <showonepage>false</showonepage>
                         <onleft>10001</onleft>
                     </control>
-
                     <include content="Settings_Right_Grouplist">
                         <param name="id">10001</param>
                         <onleft>10000</onleft>
-                        <include content="SkinSettings_Items_Menus">
-                            <param name="baseid">0</param>
-                        </include>
-                        <include content="SkinSettings_Items_Appearance">
-                            <param name="baseid">1</param>
-                        </include>
-                        <include content="SkinSettings_Items_Interface">
-                            <param name="baseid">2</param>
-                        </include>
-                        <include content="SkinSettings_Items_Details">
-                            <param name="baseid">3</param>
-                        </include>
-                        <include content="SkinSettings_Items_Viewtypes">
-                            <param name="baseid">4</param>
-                        </include>
-                        <include content="SkinSettings_Items_Behaviour">
-                            <param name="baseid">5</param>
-                        </include>
-                        <include content="SkinSettings_Items_Other">
-                            <param name="baseid">6</param>
-                        </include>
-                        <include content="SkinSettings_Items_Dependecies">
-                            <param name="baseid">7</param>
-                        </include>
-                        <include content="SkinSettings_Items_Thanks">
-                            <param name="baseid">8</param>
-                        </include>
+                        <include content="SkinSettings_Items_Menus"><param name="baseid">0</param></include>
+                        <include content="SkinSettings_Items_Appearance"><param name="baseid">1</param></include>
+                        <include content="SkinSettings_Items_Interface"><param name="baseid">2</param></include>
+                        <include content="SkinSettings_Items_Details"><param name="baseid">3</param></include>
+                        <include content="SkinSettings_Items_Viewtypes"><param name="baseid">4</param></include>
+                        <include content="SkinSettings_Items_Behaviour"><param name="baseid">5</param></include>
+                        <include content="SkinSettings_Items_Other"><param name="baseid">6</param></include>
+                        <include content="SkinSettings_Items_Dependecies"><param name="baseid">7</param></include>
+                        <include content="SkinSettings_Items_Thanks"><param name="baseid">8</param></include>
                     </include>
                 </include>
                 <include>Settings_InfoText</include>
 
             </include>
-
         </include>
-
     </controls>
-
 </window>
