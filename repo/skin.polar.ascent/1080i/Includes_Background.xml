@@ -43,12 +43,8 @@
     <include name="Background_Artwork">
         <param name="fadetime">background_fadetime</param>
         <definition>
-            <include content="Background_FlixArt" condition="$EXP[Exp_TMDbHelper_IsBlur]">
+            <include content="Background_FlixArt">
                 <param name="fadetime">$PARAM[fadetime]</param>
-            </include>
-            <include content="Background_FlixArt" condition="!$EXP[Exp_TMDbHelper_IsBlur]">
-                <param name="fadetime">$PARAM[fadetime]</param>
-                <param name="diffuse">diffuse/flixart/flixart_new.png</param>
             </include>
         </definition>
     </include>
@@ -78,12 +74,7 @@
         <definition>
             <control type="group">
                 <include>Background_NotVideo</include>
-                <include content="Background_Blur_Quadrants" condition="$EXP[Exp_TMDbHelper_IsBlur]">
-                    <param name="flixart_size_w">$PARAM[flixart_size_w]</param>
-                    <param name="flixart_size_h">$PARAM[flixart_size_h]</param>
-                    <param name="fadetime">$PARAM[fadetime]</param>
-                </include>
-                <include content="Background_Image" condition="!$EXP[Exp_TMDbHelper_IsBlur]">
+                <include content="Background_Image">
                     <param name="fadetime">$PARAM[fadetime]</param>
                 </include>
             </control>
@@ -216,8 +207,9 @@
     <include name="Background_Main_Overlay">
         <include condition="System.HasAddon(resource.images.arctic.waves)">Background_BusyLoader</include>
         <control type="image">
-            <!-- Hide combined_flixart overlay only on the specific hub that has a custom background set -->
-            <visible>!([Window.IsVisible(Home) + !String.IsEmpty(Skin.Image(Background.home))] | [Window.IsVisible(1101) + !String.IsEmpty(Skin.Image(Background.1101))] | [Window.IsVisible(1102) + !String.IsEmpty(Skin.Image(Background.1102))] | [Window.IsVisible(1103) + !String.IsEmpty(Skin.Image(Background.1103))] | [Window.IsVisible(1104) + !String.IsEmpty(Skin.Image(Background.1104))] | [Window.IsVisible(1105) + !String.IsEmpty(Skin.Image(Background.1105))] | [Window.IsVisible(1106) + !String.IsEmpty(Skin.Image(Background.1106))] | [Window.IsVisible(1107) + !String.IsEmpty(Skin.Image(Background.1107))] | [Window.IsVisible(1108) + !String.IsEmpty(Skin.Image(Background.1108))] | [Window.IsVisible(1109) + !String.IsEmpty(Skin.Image(Background.1109))] | [Window.IsVisible(1110) + !String.IsEmpty(Skin.Image(Background.1110))] | [Window.IsVisible(1111) + !String.IsEmpty(Skin.Image(Background.1111))])</visible>
+            <!-- Hide vignette only when custom image is set AND blur toggle is OFF for that hub -->
+            <!-- Blur toggle ON = user wants vignette even with custom image -->
+            <visible>!([Window.IsVisible(Home) + !String.IsEmpty(Skin.Image(Background.home)) + !Skin.HasSetting(background.blur.home)] | [Window.IsVisible(1101) + !String.IsEmpty(Skin.Image(Background.1101)) + !Skin.HasSetting(background.blur.1101)] | [Window.IsVisible(1102) + !String.IsEmpty(Skin.Image(Background.1102)) + !Skin.HasSetting(background.blur.1102)] | [Window.IsVisible(1103) + !String.IsEmpty(Skin.Image(Background.1103)) + !Skin.HasSetting(background.blur.1103)] | [Window.IsVisible(1104) + !String.IsEmpty(Skin.Image(Background.1104)) + !Skin.HasSetting(background.blur.1104)] | [Window.IsVisible(1105) + !String.IsEmpty(Skin.Image(Background.1105)) + !Skin.HasSetting(background.blur.1105)] | [Window.IsVisible(1106) + !String.IsEmpty(Skin.Image(Background.1106)) + !Skin.HasSetting(background.blur.1106)] | [Window.IsVisible(1107) + !String.IsEmpty(Skin.Image(Background.1107)) + !Skin.HasSetting(background.blur.1107)] | [Window.IsVisible(1108) + !String.IsEmpty(Skin.Image(Background.1108)) + !Skin.HasSetting(background.blur.1108)] | [Window.IsVisible(1109) + !String.IsEmpty(Skin.Image(Background.1109)) + !Skin.HasSetting(background.blur.1109)] | [Window.IsVisible(1110) + !String.IsEmpty(Skin.Image(Background.1110)) + !Skin.HasSetting(background.blur.1110)] | [Window.IsVisible(1111) + !String.IsEmpty(Skin.Image(Background.1111)) + !Skin.HasSetting(background.blur.1111)])</visible>
             <texture colordiffuse="$VAR[ColorBackground]">background/combined_flixart.png</texture>
         </control>
         <control type="image">
