@@ -210,10 +210,6 @@
     <include name="Background_Main_Overlay">
         <include condition="System.HasAddon(resource.images.arctic.waves)">Background_BusyLoader</include>
         <control type="image">
-            <visible>!([Window.IsVisible(Home) + !String.IsEmpty(Skin.Image(Background.home)) + !Skin.HasSetting(background.blur.home)] | [Window.IsVisible(1101) + !String.IsEmpty(Skin.Image(Background.1101)) + !Skin.HasSetting(background.blur.1101)] | [Window.IsVisible(1102) + !String.IsEmpty(Skin.Image(Background.1102)) + !Skin.HasSetting(background.blur.1102)] | [Window.IsVisible(1103) + !String.IsEmpty(Skin.Image(Background.1103)) + !Skin.HasSetting(background.blur.1103)] | [Window.IsVisible(1104) + !String.IsEmpty(Skin.Image(Background.1104)) + !Skin.HasSetting(background.blur.1104)] | [Window.IsVisible(1105) + !String.IsEmpty(Skin.Image(Background.1105)) + !Skin.HasSetting(background.blur.1105)] | [Window.IsVisible(1106) + !String.IsEmpty(Skin.Image(Background.1106)) + !Skin.HasSetting(background.blur.1106)] | [Window.IsVisible(1107) + !String.IsEmpty(Skin.Image(Background.1107)) + !Skin.HasSetting(background.blur.1107)] | [Window.IsVisible(1108) + !String.IsEmpty(Skin.Image(Background.1108)) + !Skin.HasSetting(background.blur.1108)] | [Window.IsVisible(1109) + !String.IsEmpty(Skin.Image(Background.1109)) + !Skin.HasSetting(background.blur.1109)] | [Window.IsVisible(1110) + !String.IsEmpty(Skin.Image(Background.1110)) + !Skin.HasSetting(background.blur.1110)] | [Window.IsVisible(1111) + !String.IsEmpty(Skin.Image(Background.1111)) + !Skin.HasSetting(background.blur.1111)])</visible>
-            <texture colordiffuse="$VAR[ColorBackground]">background/combined_flixart.png</texture>
-        </control>
-        <control type="image">
             <texture colordiffuse="$VAR[ColorBackground]">background/combined_overlay.png</texture>
             <visible>$EXP[Exp_BackgroundArtwork_IsOverlay]</visible>
             <include content="Animation_Fade_In">
