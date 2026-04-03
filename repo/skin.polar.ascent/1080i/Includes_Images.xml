@@ -316,6 +316,21 @@
         <value>special://home/addons/resource.images.polar.ascent/backgrounds/blur/polar_blur.jpg</value>
     </variable>
 
+    <variable name="Image_BlurSource">
+        <!-- Custom hub image if set - used as blur source -->
+        <value condition="Window.IsVisible(Home) + !String.IsEmpty(Skin.Image(Background.home))">$INFO[Skin.Image(Background.home)]</value>
+        <value condition="Window.IsVisible(1101) + !String.IsEmpty(Skin.Image(Background.1101))">$INFO[Skin.Image(Background.1101)]</value>
+        <value condition="Window.IsVisible(1102) + !String.IsEmpty(Skin.Image(Background.1102))">$INFO[Skin.Image(Background.1102)]</value>
+        <value condition="Window.IsVisible(1103) + !String.IsEmpty(Skin.Image(Background.1103))">$INFO[Skin.Image(Background.1103)]</value>
+        <value condition="Window.IsVisible(1104) + !String.IsEmpty(Skin.Image(Background.1104))">$INFO[Skin.Image(Background.1104)]</value>
+        <value condition="Window.IsVisible(1109) + !String.IsEmpty(Skin.Image(Background.1109))">$INFO[Skin.Image(Background.1109)]</value>
+        <value condition="Window.IsVisible(1110) + !String.IsEmpty(Skin.Image(Background.1110))">$INFO[Skin.Image(Background.1110)]</value>
+        <!-- Static global image if set -->
+        <value condition="!String.IsEmpty(Skin.String(Background.Image))">$INFO[Skin.String(Background.Image)]</value>
+        <!-- Fanart from spotlight/widget containers -->
+        <value>$VAR[Image_Foreground_NoService]</value>
+    </variable>
+
     <variable name="Image_OSD_Poster">
         <value condition="!String.IsEmpty(VideoPlayer.Art(poster))">$INFO[VideoPlayer.Art(poster)]</value>
         <value condition="!String.IsEmpty(VideoPlayer.Art(tvshow.poster))">$INFO[VideoPlayer.Art(tvshow.poster)]</value>

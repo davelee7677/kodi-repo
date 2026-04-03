@@ -43,7 +43,8 @@
     <include name="Background_Artwork">
         <param name="fadetime">background_fadetime</param>
         <definition>
-            <include content="Background_FlixArt">
+            <!-- Only show FlixArt fanart overlay when no custom hub background is active -->
+            <include content="Background_FlixArt" condition="!([Window.IsVisible(Home) + !String.IsEmpty(Skin.Image(Background.home))] | [Window.IsVisible(1101) + !String.IsEmpty(Skin.Image(Background.1101))] | [Window.IsVisible(1102) + !String.IsEmpty(Skin.Image(Background.1102))] | [Window.IsVisible(1103) + !String.IsEmpty(Skin.Image(Background.1103))] | [Window.IsVisible(1104) + !String.IsEmpty(Skin.Image(Background.1104))] | [Window.IsVisible(1109) + !String.IsEmpty(Skin.Image(Background.1109))] | [Window.IsVisible(1110) + !String.IsEmpty(Skin.Image(Background.1110))])">
                 <param name="fadetime">$PARAM[fadetime]</param>
             </include>
         </definition>
@@ -55,14 +56,35 @@
             <right>0</right>
             <width>$PARAM[flixart_size_w]</width>
             <height>$PARAM[flixart_size_h]</height>
-            <control type="image">
+            <!-- High blur (720): 300% scale = most blur -->
+            <control type="image" condition="Skin.String(TMDbHelper.Blur.Size,720)">
+                <top>0</top>
+                <right>0</right>
+                <width>300%</width>
+                <height>300%</height>
+                <fadetime>$PARAM[fadetime]</fadetime>
+                <aspectratio>scale</aspectratio>
+                <texture background="true">$VAR[Image_BlurSource]</texture>
+            </control>
+            <!-- Default blur (480): 200% scale -->
+            <control type="image" condition="!Skin.String(TMDbHelper.Blur.Size,720) + !Skin.String(TMDbHelper.Blur.Size,240)">
                 <top>0</top>
                 <right>0</right>
                 <width>200%</width>
                 <height>200%</height>
                 <fadetime>$PARAM[fadetime]</fadetime>
                 <aspectratio>scale</aspectratio>
-                <texture background="true">$VAR[Image_SimpleBackground]</texture>
+                <texture background="true">$VAR[Image_BlurSource]</texture>
+            </control>
+            <!-- Low blur (240): 150% scale = subtle blur -->
+            <control type="image" condition="Skin.String(TMDbHelper.Blur.Size,240)">
+                <top>0</top>
+                <right>0</right>
+                <width>150%</width>
+                <height>150%</height>
+                <fadetime>$PARAM[fadetime]</fadetime>
+                <aspectratio>scale</aspectratio>
+                <texture background="true">$VAR[Image_BlurSource]</texture>
             </control>
         </control>
     </include>
@@ -209,6 +231,11 @@
 
     <include name="Background_Main_Overlay">
         <include condition="System.HasAddon(resource.images.arctic.waves)">Background_BusyLoader</include>
+        <control type="image">
+            <!-- Vignette: hide on custom hub backgrounds when blur toggle is OFF -->
+            <visible>!([Window.IsVisible(Home) + !String.IsEmpty(Skin.Image(Background.home)) + !Skin.HasSetting(background.blur.home)] | [Window.IsVisible(1101) + !String.IsEmpty(Skin.Image(Background.1101)) + !Skin.HasSetting(background.blur.1101)] | [Window.IsVisible(1102) + !String.IsEmpty(Skin.Image(Background.1102)) + !Skin.HasSetting(background.blur.1102)] | [Window.IsVisible(1103) + !String.IsEmpty(Skin.Image(Background.1103)) + !Skin.HasSetting(background.blur.1103)] | [Window.IsVisible(1104) + !String.IsEmpty(Skin.Image(Background.1104)) + !Skin.HasSetting(background.blur.1104)] | [Window.IsVisible(1109) + !String.IsEmpty(Skin.Image(Background.1109)) + !Skin.HasSetting(background.blur.1109)] | [Window.IsVisible(1110) + !String.IsEmpty(Skin.Image(Background.1110)) + !Skin.HasSetting(background.blur.1110)])</visible>
+            <texture colordiffuse="$VAR[ColorBackground]">background/vignetted.png</texture>
+        </control>
         <control type="image">
             <texture colordiffuse="$VAR[ColorBackground]">background/combined_overlay.png</texture>
             <visible>$EXP[Exp_BackgroundArtwork_IsOverlay]</visible>
