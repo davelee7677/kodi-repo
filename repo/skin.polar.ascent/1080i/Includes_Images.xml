@@ -312,6 +312,12 @@
         <!-- Fanart fallback from library when no custom background is set -->
         <value condition="!String.IsEmpty(Container.ListItem.Art(fanart))">$INFO[Container.ListItem.Art(fanart)]</value>
         <value condition="!String.IsEmpty(Container.ListItem.Art(tvshow.fanart))">$INFO[Container.ListItem.Art(tvshow.fanart)]</value>
+        <!-- background/landscape art type fallbacks - catches movies where Kodi stored background.jpg as type 'background' not 'fanart' -->
+        <value condition="!String.IsEmpty(Container.ListItem.Art(background))">$INFO[Container.ListItem.Art(background)]</value>
+        <value condition="!String.IsEmpty(Container.ListItem.Art(landscape))">$INFO[Container.ListItem.Art(landscape)]</value>
+        <value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+        <value condition="!String.IsEmpty(ListItem.Art(background))">$INFO[ListItem.Art(background)]</value>
+        <value condition="!String.IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
         <!-- Polar blur default -->
         <value>special://home/addons/resource.images.polar.ascent/backgrounds/blur/polar_blur.jpg</value>
     </variable>
