@@ -309,10 +309,27 @@
         <value condition="[Control.HasFocus(3108) | Window.IsVisible(1108)] + !String.IsEmpty(Skin.Image(Background.1108))">$INFO[Skin.Image(Background.1108)]</value>
         <!-- Static global image if set -->
         <value condition="!String.IsEmpty(Skin.String(Background.Image))">$INFO[Skin.String(Background.Image)]</value>
-        <!-- Fanart fallback from library when no custom background is set -->
+        <!-- Fanart fallback using spotlight container 301 -->
+        <value condition="!String.IsEmpty(Container(301).ListItem.Art(fanart))">$INFO[Container(301).ListItem.Art(fanart)]</value>
+        <value condition="!String.IsEmpty(Container(301).ListItem.Art(tvshow.fanart))">$INFO[Container(301).ListItem.Art(tvshow.fanart)]</value>
+        <value condition="!String.IsEmpty(Container(301).ListItem.Art(background))">$INFO[Container(301).ListItem.Art(background)]</value>
+        <value condition="!String.IsEmpty(Container(301).ListItem.Art(landscape))">$INFO[Container(301).ListItem.Art(landscape)]</value>
+        <!-- Fanart fallback using default widget container (set by TMDbHelper.WidgetContainer) -->
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),501) + !String.IsEmpty(Container(501).ListItem.Art(fanart))">$INFO[Container(501).ListItem.Art(fanart)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),501) + !String.IsEmpty(Container(501).ListItem.Art(tvshow.fanart))">$INFO[Container(501).ListItem.Art(tvshow.fanart)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),501) + !String.IsEmpty(Container(501).ListItem.Art(background))">$INFO[Container(501).ListItem.Art(background)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),501) + !String.IsEmpty(Container(501).ListItem.Art(landscape))">$INFO[Container(501).ListItem.Art(landscape)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),502) + !String.IsEmpty(Container(502).ListItem.Art(fanart))">$INFO[Container(502).ListItem.Art(fanart)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),502) + !String.IsEmpty(Container(502).ListItem.Art(background))">$INFO[Container(502).ListItem.Art(background)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),503) + !String.IsEmpty(Container(503).ListItem.Art(fanart))">$INFO[Container(503).ListItem.Art(fanart)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),503) + !String.IsEmpty(Container(503).ListItem.Art(background))">$INFO[Container(503).ListItem.Art(background)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),504) + !String.IsEmpty(Container(504).ListItem.Art(fanart))">$INFO[Container(504).ListItem.Art(fanart)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),504) + !String.IsEmpty(Container(504).ListItem.Art(background))">$INFO[Container(504).ListItem.Art(background)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),505) + !String.IsEmpty(Container(505).ListItem.Art(fanart))">$INFO[Container(505).ListItem.Art(fanart)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),505) + !String.IsEmpty(Container(505).ListItem.Art(background))">$INFO[Container(505).ListItem.Art(background)]</value>
+        <!-- Generic fallback -->
         <value condition="!String.IsEmpty(Container.ListItem.Art(fanart))">$INFO[Container.ListItem.Art(fanart)]</value>
         <value condition="!String.IsEmpty(Container.ListItem.Art(tvshow.fanart))">$INFO[Container.ListItem.Art(tvshow.fanart)]</value>
-        <!-- background/landscape art type fallbacks - catches movies where Kodi stored background.jpg as type 'background' not 'fanart' -->
         <value condition="!String.IsEmpty(Container.ListItem.Art(background))">$INFO[Container.ListItem.Art(background)]</value>
         <value condition="!String.IsEmpty(Container.ListItem.Art(landscape))">$INFO[Container.ListItem.Art(landscape)]</value>
         <value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
