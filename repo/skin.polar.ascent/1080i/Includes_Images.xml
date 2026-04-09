@@ -412,6 +412,10 @@
         <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),548)">$INFO[Container(548).ListItem.Art(fanart)]</value>
         <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),549)">$INFO[Container(549).ListItem.Art(fanart)]</value>
         <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),550)">$INFO[Container(550).ListItem.Art(fanart)]</value>
+        <!-- Direct ListItem fallbacks - catches local-only content where TMDbHelper.WidgetContainer is not set -->
+        <value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+        <value condition="!String.IsEmpty(ListItem.Art(background))">$INFO[ListItem.Art(background)]</value>
+        <value condition="!String.IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
     </variable>
 
     <variable name="Image_Foreground">
