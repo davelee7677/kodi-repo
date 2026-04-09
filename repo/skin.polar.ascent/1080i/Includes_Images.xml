@@ -296,7 +296,7 @@
 
     <variable name="Image_SimpleBackground">
         <!-- Per-Hub Custom Backgrounds -->
-        <value condition="[Window.IsVisible(Home) + Control.HasFocus(3100) | Window.IsVisible(Home) + !Control.HasFocus(3101) + !Control.HasFocus(3102) + !Control.HasFocus(3103) + !Control.HasFocus(3104)] + !String.IsEmpty(Skin.Image(Background.home))">$INFO[Skin.Image(Background.home)]</value>
+        <value condition="[Window.IsVisible(Home) + Control.HasFocus(3100) | Window.IsVisible(Home) + !Control.HasFocus(3101) + !Control.HasFocus(3102) + !Control.HasFocus(3103) + !Control.HasFocus(3104) + !Control.HasFocus(3109) + !Control.HasFocus(3110)] + !String.IsEmpty(Skin.Image(Background.home))">$INFO[Skin.Image(Background.home)]</value>
         <value condition="[Control.HasFocus(3101) | Window.IsVisible(1101)] + !String.IsEmpty(Skin.Image(Background.1101))">$INFO[Skin.Image(Background.1101)]</value>
         <value condition="[Control.HasFocus(3102) | Window.IsVisible(1102)] + !String.IsEmpty(Skin.Image(Background.1102))">$INFO[Skin.Image(Background.1102)]</value>
         <value condition="[Control.HasFocus(3103) | Window.IsVisible(1103)] + !String.IsEmpty(Skin.Image(Background.1103))">$INFO[Skin.Image(Background.1103)]</value>
@@ -323,6 +323,10 @@
         <value condition="Window.IsVisible(1102) + !String.IsEmpty(Skin.Image(Background.1102))">$INFO[Skin.Image(Background.1102)]</value>
         <value condition="Window.IsVisible(1103) + !String.IsEmpty(Skin.Image(Background.1103))">$INFO[Skin.Image(Background.1103)]</value>
         <value condition="Window.IsVisible(1104) + !String.IsEmpty(Skin.Image(Background.1104))">$INFO[Skin.Image(Background.1104)]</value>
+        <value condition="Window.IsVisible(1105) + !String.IsEmpty(Skin.Image(Background.1105))">$INFO[Skin.Image(Background.1105)]</value>
+        <value condition="Window.IsVisible(1106) + !String.IsEmpty(Skin.Image(Background.1106))">$INFO[Skin.Image(Background.1106)]</value>
+        <value condition="Window.IsVisible(1107) + !String.IsEmpty(Skin.Image(Background.1107))">$INFO[Skin.Image(Background.1107)]</value>
+        <value condition="Window.IsVisible(1108) + !String.IsEmpty(Skin.Image(Background.1108))">$INFO[Skin.Image(Background.1108)]</value>
         <value condition="Window.IsVisible(1109) + !String.IsEmpty(Skin.Image(Background.1109))">$INFO[Skin.Image(Background.1109)]</value>
         <value condition="Window.IsVisible(1110) + !String.IsEmpty(Skin.Image(Background.1110))">$INFO[Skin.Image(Background.1110)]</value>
         <!-- Static global image if set -->
@@ -412,8 +416,6 @@
 
     <variable name="Image_Foreground">
         <value condition="$EXP[Exp_BackgroundArtwork_IsSimple]">$INFO[Window(Home).Property(TMDbHelper.SimpleBackground.BlurImage.Original)]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Fanart))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Fanart)]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Current.Fanart))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Current.Fanart)]</value>
         <value condition="!String.IsEmpty(Window.Property(TMDbHelper.ListItem.BlurImage.Original))">$INFO[Window.Property(TMDbHelper.ListItem.BlurImage.Original)]</value>
         <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Current.BlurImage.Original))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Current.BlurImage.Original)]</value>
         <value>$VAR[Image_Foreground_NoService]</value>
