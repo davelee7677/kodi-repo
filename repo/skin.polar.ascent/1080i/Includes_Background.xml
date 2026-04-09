@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-    <!-- Expressions to avoid long inline conditions that exceed Kodi's parser limit -->
-    <expression name="Exp_CustomHubBackground_IsActive">[Window.IsVisible(Home) + !String.IsEmpty(Skin.Image(Background.home))] | [Window.IsVisible(1101) + !String.IsEmpty(Skin.Image(Background.1101))] | [Window.IsVisible(1102) + !String.IsEmpty(Skin.Image(Background.1102))] | [Window.IsVisible(1103) + !String.IsEmpty(Skin.Image(Background.1103))] | [Window.IsVisible(1104) + !String.IsEmpty(Skin.Image(Background.1104))] | [Window.IsVisible(1105) + !String.IsEmpty(Skin.Image(Background.1105))] | [Window.IsVisible(1106) + !String.IsEmpty(Skin.Image(Background.1106))] | [Window.IsVisible(1107) + !String.IsEmpty(Skin.Image(Background.1107))] | [Window.IsVisible(1108) + !String.IsEmpty(Skin.Image(Background.1108))] | [Window.IsVisible(1109) + !String.IsEmpty(Skin.Image(Background.1109))] | [Window.IsVisible(1110) + !String.IsEmpty(Skin.Image(Background.1110))]</expression>
-
-    <expression name="Exp_CustomHubBackground_NoBlur">[Window.IsVisible(Home) + !String.IsEmpty(Skin.Image(Background.home)) + !Skin.HasSetting(background.blur.home)] | [Window.IsVisible(1101) + !String.IsEmpty(Skin.Image(Background.1101)) + !Skin.HasSetting(background.blur.1101)] | [Window.IsVisible(1102) + !String.IsEmpty(Skin.Image(Background.1102)) + !Skin.HasSetting(background.blur.1102)] | [Window.IsVisible(1103) + !String.IsEmpty(Skin.Image(Background.1103)) + !Skin.HasSetting(background.blur.1103)] | [Window.IsVisible(1104) + !String.IsEmpty(Skin.Image(Background.1104)) + !Skin.HasSetting(background.blur.1104)] | [Window.IsVisible(1109) + !String.IsEmpty(Skin.Image(Background.1109)) + !Skin.HasSetting(background.blur.1109)] | [Window.IsVisible(1110) + !String.IsEmpty(Skin.Image(Background.1110)) + !Skin.HasSetting(background.blur.1110)]</expression>
-
     <include name="Background_BusyLoader">
         <control type="group">
             <visible>Window.IsVisible(DialogBusy.xml)</visible>
@@ -49,7 +44,7 @@
         <param name="fadetime">background_fadetime</param>
         <definition>
             <!-- Only show FlixArt fanart overlay when no custom hub background is active -->
-            <include content="Background_FlixArt" condition="!$EXP[Exp_CustomHubBackground_IsActive]">
+            <include content="Background_FlixArt" condition="!([Window.IsVisible(Home) + !String.IsEmpty(Skin.String(Background.home))] | [Window.IsVisible(1101) + !String.IsEmpty(Skin.String(Background.1101))] | [Window.IsVisible(1102) + !String.IsEmpty(Skin.String(Background.1102))] | [Window.IsVisible(1103) + !String.IsEmpty(Skin.String(Background.1103))] | [Window.IsVisible(1104) + !String.IsEmpty(Skin.String(Background.1104))] | [Window.IsVisible(1105) + !String.IsEmpty(Skin.String(Background.1105))] | [Window.IsVisible(1106) + !String.IsEmpty(Skin.String(Background.1106))] | [Window.IsVisible(1107) + !String.IsEmpty(Skin.String(Background.1107))] | [Window.IsVisible(1108) + !String.IsEmpty(Skin.String(Background.1108))] | [Window.IsVisible(1109) + !String.IsEmpty(Skin.String(Background.1109))] | [Window.IsVisible(1110) + !String.IsEmpty(Skin.String(Background.1110))])">
                 <param name="fadetime">$PARAM[fadetime]</param>
             </include>
         </definition>
@@ -238,7 +233,7 @@
         <include condition="System.HasAddon(resource.images.arctic.waves)">Background_BusyLoader</include>
         <control type="image">
             <!-- Vignette: hide on custom hub backgrounds when blur toggle is OFF -->
-            <visible>!$EXP[Exp_CustomHubBackground_NoBlur]</visible>
+            <visible>!([Window.IsVisible(Home) + !String.IsEmpty(Skin.String(Background.home)) + !Skin.HasSetting(background.blur.home)] | [Window.IsVisible(1101) + !String.IsEmpty(Skin.String(Background.1101)) + !Skin.HasSetting(background.blur.1101)] | [Window.IsVisible(1102) + !String.IsEmpty(Skin.String(Background.1102)) + !Skin.HasSetting(background.blur.1102)] | [Window.IsVisible(1103) + !String.IsEmpty(Skin.String(Background.1103)) + !Skin.HasSetting(background.blur.1103)] | [Window.IsVisible(1104) + !String.IsEmpty(Skin.String(Background.1104)) + !Skin.HasSetting(background.blur.1104)] | [Window.IsVisible(1109) + !String.IsEmpty(Skin.String(Background.1109)) + !Skin.HasSetting(background.blur.1109)] | [Window.IsVisible(1110) + !String.IsEmpty(Skin.String(Background.1110)) + !Skin.HasSetting(background.blur.1110)])</visible>
             <texture colordiffuse="$VAR[ColorBackground]">background/vignetted.png</texture>
         </control>
         <control type="image">
