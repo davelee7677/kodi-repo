@@ -446,6 +446,10 @@
     </variable>
 
     <variable name="Image_Foreground">
+        <!-- First: read directly from spotlight container when it has focus -->
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),301) + !String.IsEmpty(Container(301).ListItem.Art(fanart))">$INFO[Container(301).ListItem.Art(fanart)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),301) + !String.IsEmpty(Container(301).ListItem.Art(background))">$INFO[Container(301).ListItem.Art(background)]</value>
+        <!-- TMDbHelper SimpleBackground only when it has a real image -->
         <value condition="$EXP[Exp_BackgroundArtwork_IsSimple] + !String.IsEqual(Window(Home).Property(TMDbHelper.SimpleBackground.BlurImage.Original),special://home/addons/resource.images.polar.ascent/backgrounds/blur/polar_blur.jpg) + !String.IsEmpty(Window(Home).Property(TMDbHelper.SimpleBackground.BlurImage.Original))">$INFO[Window(Home).Property(TMDbHelper.SimpleBackground.BlurImage.Original)]</value>
         <value>$VAR[Image_Foreground_NoService]</value>
     </variable>
