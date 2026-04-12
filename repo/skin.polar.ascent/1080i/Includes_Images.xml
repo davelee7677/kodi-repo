@@ -354,6 +354,9 @@
         <value condition="Window.IsVisible(1110) + !String.IsEmpty(Skin.String(Background.1110))">$INFO[Skin.String(Background.1110)]</value>
         <!-- Static global image if set -->
         <value condition="!String.IsEmpty(Skin.String(Background.Image))">$INFO[Skin.String(Background.Image)]</value>
+        <!-- TMDbHelper blur properties -->
+        <value condition="!String.IsEmpty(Window.Property(TMDbHelper.ListItem.BlurImage))">$INFO[Window.Property(TMDbHelper.ListItem.BlurImage)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Current.BlurImage))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Current.BlurImage)]</value>
         <!-- Fanart from spotlight/widget containers -->
         <value>$VAR[Image_Foreground_NoService]</value>
     </variable>
@@ -446,11 +449,14 @@
     </variable>
 
     <variable name="Image_Foreground">
-        <!-- First: read directly from spotlight container when it has focus -->
-        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),301) + !String.IsEmpty(Container(301).ListItem.Art(fanart))">$INFO[Container(301).ListItem.Art(fanart)]</value>
-        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),301) + !String.IsEmpty(Container(301).ListItem.Art(background))">$INFO[Container(301).ListItem.Art(background)]</value>
-        <!-- TMDbHelper SimpleBackground only when it has a real image -->
+        <!-- SimpleBackground only when TMDbHelper has a real image, not polar blur -->
         <value condition="$EXP[Exp_BackgroundArtwork_IsSimple] + !String.IsEqual(Window(Home).Property(TMDbHelper.SimpleBackground.BlurImage.Original),special://home/addons/resource.images.polar.ascent/backgrounds/blur/polar_blur.jpg) + !String.IsEmpty(Window(Home).Property(TMDbHelper.SimpleBackground.BlurImage.Original))">$INFO[Window(Home).Property(TMDbHelper.SimpleBackground.BlurImage.Original)]</value>
+        <!-- When blur is OFF use local art directly (AF3 pattern) -->
+        <value condition="!$EXP[Exp_TMDbHelper_IsBlur]">$VAR[Image_Foreground_NoService]</value>
+        <!-- TMDbHelper blur properties when blur is ON and available -->
+        <value condition="!String.IsEmpty(Window.Property(TMDbHelper.ListItem.BlurImage.Original))">$INFO[Window.Property(TMDbHelper.ListItem.BlurImage.Original)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Current.BlurImage.Original))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Current.BlurImage.Original)]</value>
+        <!-- Final fallback: local art -->
         <value>$VAR[Image_Foreground_NoService]</value>
     </variable>
 
