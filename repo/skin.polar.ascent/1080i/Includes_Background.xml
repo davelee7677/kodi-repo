@@ -120,9 +120,9 @@
                 <texture colordiffuse="33000000">common/white.png</texture>
             </control>
             <control type="multiimage">
-                <imagepath colordiffuse="$PARAM[colordiffuse]">$VAR[Image_StartUp]</imagepath>
+                <imagepath colordiffuse="b3ffffff">$VAR[Image_StartUp]</imagepath>
                 <randomize>true</randomize>
-                <timeperimage>5000</timeperimage>
+                <timeperimage>10000</timeperimage>
                 <fadetime>2000</fadetime>
                 <aspectratio>scale</aspectratio>
             </control>
