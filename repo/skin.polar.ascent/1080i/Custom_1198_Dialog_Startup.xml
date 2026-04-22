@@ -4,9 +4,12 @@
     <visible>System.HasAlarm(SplashTimeOut)</visible>
     <visible>!String.IsEmpty(Window.Property(SplashIsVisible))</visible>
     <controls>
-        <include content="Hub_Widget_Splash">
-            <param name="condition">true</param>
-            <param name="label">$INFO[Window.Property(InitStatus)]</param>
-        </include>
+        <control type="group">
+            <animation effect="fade" start="0" end="100" time="1000" delay="8000" tween="sine">Visible</animation>
+            <include content="Hub_Widget_Splash">
+                <param name="condition">true</param>
+                <param name="label">$INFO[Window.Property(InitStatus)]</param>
+            </include>
+        </control>
     </controls>
 </window>
