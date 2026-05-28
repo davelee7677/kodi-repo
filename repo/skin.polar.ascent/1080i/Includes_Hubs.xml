@@ -358,7 +358,7 @@
                     </control>
                     <!-- White ring -->
                     <control type="image">
-                        <texture colordiffuse="ffffffff">common/ring_chrome_focus.png</texture>
+                        <texture colordiffuse="ffffffff">common/circle_200-outline.png</texture>
                     </control>
                     <!-- White symbol -->
                     <control type="image">
