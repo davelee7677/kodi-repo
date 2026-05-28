@@ -348,9 +348,21 @@
                 </control>
                 <control type="group">
                     <visible>Control.HasFocus($PARAM[id])</visible>
-                    <!-- Outer white glow -->
+                    <!-- Outer blue glow (oversized, bleeds into background) -->
                     <control type="image">
-                        <texture colordiffuse="ffffffff">shadows/circle_120-shadow-40.png</texture>
+                        <centerleft>50%</centerleft>
+                        <centertop>50%</centertop>
+                        <width>180%</width>
+                        <height>180%</height>
+                        <texture colordiffuse="cc1f6fd6">shadows/circle_120-shadow-40.png</texture>
+                    </control>
+                    <!-- Soft white inner glow -->
+                    <control type="image">
+                        <centerleft>50%</centerleft>
+                        <centertop>50%</centertop>
+                        <width>128%</width>
+                        <height>128%</height>
+                        <texture colordiffuse="99ffffff">shadows/circle_120-shadow-40.png</texture>
                     </control>
                     <!-- White ring (full-size white circle behind) -->
                     <control type="image">
@@ -358,11 +370,11 @@
                     </control>
                     <!-- Blue fill (inset to reveal white ring) -->
                     <control type="image">
-                        <left>8</left>
-                        <top>8</top>
-                        <width>104</width>
-                        <height>104</height>
-                        <texture colordiffuse="ff1139d6">diffuse/circle/circle_120.png</texture>
+                        <centerleft>50%</centerleft>
+                        <centertop>50%</centertop>
+                        <width>92%</width>
+                        <height>92%</height>
+                        <texture colordiffuse="ff0d47a1">diffuse/circle/circle_120.png</texture>
                     </control>
                     <!-- White symbol -->
                     <control type="image">
@@ -376,7 +388,9 @@
                 <height>80</height>
                 <centertop>50%</centertop>
                 <textoffsetx>0</textoffsetx>
-                <include>Texture_Highlight_Underline_H</include>
+                <texturefocus border="10" colordiffuse="ffffffff">common/underline.png</texturefocus>
+                <alttexturefocus border="10" colordiffuse="ffffffff">common/underline.png</alttexturefocus>
+                <texturenofocus />
                 <font>font_main_bold</font>
                 <textcolor>main_fg_90</textcolor>
                 <focusedcolor>main_fg_100</focusedcolor>
