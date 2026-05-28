@@ -352,13 +352,17 @@
                     <control type="image">
                         <texture colordiffuse="ffffffff">shadows/circle_120-shadow-40.png</texture>
                     </control>
-                    <!-- Blue fill -->
+                    <!-- White ring (full-size white circle behind) -->
                     <control type="image">
-                        <texture colordiffuse="ff1565c0">diffuse/circle/circle_120.png</texture>
+                        <texture colordiffuse="ffffffff">diffuse/circle/circle_120.png</texture>
                     </control>
-                    <!-- White ring -->
+                    <!-- Blue fill (inset to reveal white ring) -->
                     <control type="image">
-                        <texture colordiffuse="ffffffff">common/circle_200-outline.png</texture>
+                        <left>8</left>
+                        <top>8</top>
+                        <width>104</width>
+                        <height>104</height>
+                        <texture colordiffuse="ff1139d6">diffuse/circle/circle_120.png</texture>
                     </control>
                     <!-- White symbol -->
                     <control type="image">
