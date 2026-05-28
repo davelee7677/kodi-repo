@@ -349,11 +349,11 @@
                 <control type="group">
                     <visible>Control.HasFocus($PARAM[id])</visible>
                     <control type="image">
-                        <texture colordiffuse="$VAR[ColorHighlight]">diffuse/circle/circle_120.png</texture>
+                        <texture colordiffuse="ffffffff">diffuse/circle/circle_120.png</texture>
                     </control>
                     <control type="image">
                         <bordersize>$PARAM[bordersize]</bordersize>
-                        <texture background="true" colordiffuse="$VAR[ColorSelected]">$PARAM[image]</texture>
+                        <texture background="true" colordiffuse="main_bg_90">$PARAM[image]</texture>
                     </control>
                 </control>
             </control>
