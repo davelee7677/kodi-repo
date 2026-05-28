@@ -348,12 +348,22 @@
                 </control>
                 <control type="group">
                     <visible>Control.HasFocus($PARAM[id])</visible>
+                    <!-- Outer white glow -->
                     <control type="image">
-                        <texture colordiffuse="ffffffff">diffuse/circle/circle_120.png</texture>
+                        <texture colordiffuse="ffffffff">shadows/circle_120-shadow-40.png</texture>
                     </control>
+                    <!-- Blue fill -->
+                    <control type="image">
+                        <texture colordiffuse="ff1565c0">diffuse/circle/circle_120.png</texture>
+                    </control>
+                    <!-- White ring -->
+                    <control type="image">
+                        <texture colordiffuse="ffffffff">common/ring_chrome_focus.png</texture>
+                    </control>
+                    <!-- White symbol -->
                     <control type="image">
                         <bordersize>$PARAM[bordersize]</bordersize>
-                        <texture background="true" colordiffuse="main_bg_90">$PARAM[image]</texture>
+                        <texture background="true" colordiffuse="ffffffff">$PARAM[image]</texture>
                     </control>
                 </control>
             </control>
