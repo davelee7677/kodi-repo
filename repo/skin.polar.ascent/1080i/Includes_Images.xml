@@ -459,13 +459,13 @@
     </variable>
 
     <variable name="Image_Foreground">
-        <!-- SimpleBackground only when TMDbHelper has a real image, not polar blur -->
-        <value condition="$EXP[Exp_BackgroundArtwork_IsSimple] + !String.IsEqual(Window(Home).Property(TMDbHelper.SimpleBackground.BlurImage.Original),special://home/addons/resource.images.polar.ascent/backgrounds/blur/polar_blur.jpg) + !String.IsEmpty(Window(Home).Property(TMDbHelper.SimpleBackground.BlurImage.Original))">$INFO[Window(Home).Property(TMDbHelper.SimpleBackground.BlurImage.Original)]</value>
+        <!-- SimpleBackground only when TMDbHelper has a real processed blur, not polar blur -->
+        <value condition="$EXP[Exp_BackgroundArtwork_IsSimple] + !String.IsEqual(Window(Home).Property(TMDbHelper.SimpleBackground.BlurImage.Original),special://home/addons/resource.images.polar.ascent/backgrounds/blur/polar_blur.jpg) + !String.IsEmpty(Window(Home).Property(TMDbHelper.SimpleBackground.BlurImage))">$INFO[Window(Home).Property(TMDbHelper.SimpleBackground.BlurImage)]</value>
         <!-- When blur is OFF use local art directly (AF3 pattern) -->
         <value condition="!$EXP[Exp_TMDbHelper_IsBlur]">$VAR[Image_Foreground_NoService]</value>
-        <!-- TMDbHelper blur properties when blur is ON and available -->
-        <value condition="!String.IsEmpty(Window.Property(TMDbHelper.ListItem.BlurImage.Original))">$INFO[Window.Property(TMDbHelper.ListItem.BlurImage.Original)]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Current.BlurImage.Original))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Current.BlurImage.Original)]</value>
+        <!-- TMDbHelper processed blur images when blur is ON and available -->
+        <value condition="!String.IsEmpty(Window.Property(TMDbHelper.ListItem.BlurImage))">$INFO[Window.Property(TMDbHelper.ListItem.BlurImage)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Current.BlurImage))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Current.BlurImage)]</value>
         <!-- Final fallback: local art -->
         <value>$VAR[Image_Foreground_NoService]</value>
     </variable>
