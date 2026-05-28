@@ -374,7 +374,7 @@
                         <centertop>50%</centertop>
                         <width>92%</width>
                         <height>92%</height>
-                        <texture colordiffuse="ff0d47a1">diffuse/circle/circle_120.png</texture>
+                        <texture colordiffuse="ff0a2a6b">diffuse/circle/circle_120.png</texture>
                     </control>
                     <!-- White symbol -->
                     <control type="image">
