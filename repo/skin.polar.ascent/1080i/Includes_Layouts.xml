@@ -1807,24 +1807,10 @@
                         <param name="selected">$PARAM[selected]</param>
                         <param name="shadow_colordiffuse">$PARAM[shadow_colordiffuse]</param>
                     </include>
-                    <!-- Blue glow behind focused poster -->
-                    <control type="image">
-                        <visible>$PARAM[selected]</visible>
-                        <centerleft>50%</centerleft>
-                        <centertop>50%</centertop>
-                        <width>115%</width>
-                        <height>115%</height>
-                        <texture border="40" colordiffuse="cc1f6fd6">shadows/shadow-40.png</texture>
-                    </control>
                     <include content="Object_Control" condition="$PARAM[selected]">
                         <param name="control">image</param>
                         <include>Texture_Box_Highlight_V</include>
                     </include>
-                    <!-- Blue border on focused poster edge -->
-                    <control type="image">
-                        <visible>$PARAM[selected]</visible>
-                        <texture border="20" colordiffuse="ff0d47a1">common/box-outline.png</texture>
-                    </control>
                     <control type="textbox">
                         <textcolor>main_fg_70</textcolor>
                         <label>$INFO[$PARAM[listitem].$PARAM[listitem_label]]</label>

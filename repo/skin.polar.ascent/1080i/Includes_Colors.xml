@@ -30,9 +30,9 @@
 
     <!-- Highlight Color -->
     <variable name="ColorHighlight">
-        <value condition="$EXP[Exp_ColourHighlight_IsPolar]">1a1565c0</value>
+        <value condition="$EXP[Exp_ColourHighlight_IsPolar]">cc1f6fd6</value>
         <value condition="!String.IsEmpty(Skin.String(focuscolor.name))">$INFO[Skin.String(focuscolor.name)]</value>
-        <value>1a1565c0</value>
+        <value>cc1f6fd6</value>
     </variable>
 
     <!-- Watched / Progress Color -->
