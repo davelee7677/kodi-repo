@@ -4,11 +4,11 @@
     <expression name="Image_Clearlogo_Title_IsVisible_Expression">[[$EXP[Exp_TMDbHelper_IsData] + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListITem.CropImage))] | [$EXP[Exp_TMDbHelper_IsData] + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListITem.Current.CropImage)) + $EXP | [Exp_InfoDialogs]] | [!String.IsEmpty(ListITem.Art(clearlogo))] | [!String.IsEmpty(ListITem.Art(tvshow.clearlogo))] | [!String.IsEmpty(ListITem.Art(artist.clearlogo))]]</expression>
 
     <variable name="Image_Clearlogo_Title">
-        <value condition="$EXP[Exp_TMDbHelper_IsData] + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListITem.CropImage))">$INFO[Window(Home).Property(TMDbHelper.ListITem.CropImage)]</value>
-        <value condition="$EXP[Exp_TMDbHelper_IsData] + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListITem.Current.CropImage)) + $EXP[Exp_InfoDialogs]">$INFO[Window(Home).Property(TMDbHelper.ListITem.Current.CropImage)]</value>
         <value condition="!String.IsEmpty(ListITem.Art(clearlogo))">$INFO[ListITem.Art(clearlogo)]</value>
         <value condition="!String.IsEmpty(ListITem.Art(tvshow.clearlogo))">$INFO[ListITem.Art(tvshow.clearlogo)]</value>
         <value condition="!String.IsEmpty(ListITem.Art(artist.clearlogo))">$INFO[ListITem.Art(artist.clearlogo)]</value>
+        <value condition="$EXP[Exp_TMDbHelper_IsData] + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListITem.CropImage))">$INFO[Window(Home).Property(TMDbHelper.ListITem.CropImage)]</value>
+        <value condition="$EXP[Exp_TMDbHelper_IsData] + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListITem.Current.CropImage)) + $EXP[Exp_InfoDialogs]">$INFO[Window(Home).Property(TMDbHelper.ListITem.Current.CropImage)]</value>
     </variable>
 
     <variable name="Image_Overlay_Poster">
@@ -459,8 +459,14 @@
     </variable>
 
     <variable name="Image_Foreground">
-        <!-- FlixArt is the SHARP foreground layer; blur is rendered separately via Image_BlurSource. -->
-        <!-- Always resolve sharp local art for the active container (spotlight or widget). -->
+        <!-- SimpleBackground only when TMDbHelper has a real image, not polar blur -->
+        <value condition="$EXP[Exp_BackgroundArtwork_IsSimple] + !String.IsEqual(Window(Home).Property(TMDbHelper.SimpleBackground.BlurImage.Original),special://home/addons/resource.images.polar.ascent/backgrounds/blur/polar_blur.jpg) + !String.IsEmpty(Window(Home).Property(TMDbHelper.SimpleBackground.BlurImage.Original))">$INFO[Window(Home).Property(TMDbHelper.SimpleBackground.BlurImage.Original)]</value>
+        <!-- When blur is OFF use local art directly (AF3 pattern) -->
+        <value condition="!$EXP[Exp_TMDbHelper_IsBlur]">$VAR[Image_Foreground_NoService]</value>
+        <!-- TMDbHelper blur properties when blur is ON and available -->
+        <value condition="!String.IsEmpty(Window.Property(TMDbHelper.ListItem.BlurImage.Original))">$INFO[Window.Property(TMDbHelper.ListItem.BlurImage.Original)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Current.BlurImage.Original))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Current.BlurImage.Original)]</value>
+        <!-- Final fallback: local art -->
         <value>$VAR[Image_Foreground_NoService]</value>
     </variable>
 
