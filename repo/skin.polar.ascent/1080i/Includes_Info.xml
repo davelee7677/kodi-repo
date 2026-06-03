@@ -359,8 +359,8 @@
 
     <include name="Info_Title">
         <param name="left">40</param>
-        <param name="mainlogo_visible">!String.IsEmpty(Window.Property(TMDbHelper.ListITem.CropImage))</param>
-        <param name="mainlogo_texture">$INFO[Window.Property(TMDbHelper.ListITem.CropImage)]</param>
+        <param name="mainlogo_visible">[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo)) | !String.IsEmpty(Window.Property(TMDbHelper.ListITem.CropImage))]</param>
+        <param name="mainlogo_texture">$VAR[Image_Clearlogo_Title]</param>
         <param name="width">info_title_w</param>
         <param name="listitem">ListItem</param>
         <definition>
