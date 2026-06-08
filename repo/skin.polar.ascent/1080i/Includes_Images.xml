@@ -5,7 +5,9 @@
 
     <variable name="Image_Clearlogo_Title">
         <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),301) + !String.IsEmpty(Container(301).ListItem.Art(clearlogo))">$INFO[Container(301).ListItem.Art(clearlogo)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),301) + !String.IsEmpty(Container(301).ListItem.Art(clearlogo))">$INFO[Container(301).ListItem.Art(clearlogo)]</value>
         <value condition="!String.IsEmpty(ListITem.Art(clearlogo))">$INFO[ListITem.Art(clearlogo)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),301) + !String.IsEmpty(Container(301).ListItem.Art(tvshow.clearlogo))">$INFO[Container(301).ListItem.Art(tvshow.clearlogo)]</value>
         <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),301) + !String.IsEmpty(Container(301).ListItem.Art(tvshow.clearlogo))">$INFO[Container(301).ListItem.Art(tvshow.clearlogo)]</value>
         <value condition="!String.IsEmpty(ListITem.Art(tvshow.clearlogo))">$INFO[ListITem.Art(tvshow.clearlogo)]</value>
         <value condition="!String.IsEmpty(ListITem.Art(artist.clearlogo))">$INFO[ListITem.Art(artist.clearlogo)]</value>
