@@ -531,7 +531,15 @@
             <param name="id">8004</param>
             <label>Background Image</label>
             <label2>$VAR[Info_BackgroundImage_Label_$PARAM[window]]</label2>
-            <onclick>Skin.SetImage(Background.$PARAM[window])</onclick>
+            <onclick>Skin.SetString(Background.$PARAM[window])</onclick>
+        </include>
+        <include content="Settings_Button" description="Clear Background Image">
+            <param name="dialog">false</param>
+            <param name="id">8005</param>
+            <label>Clear Background Image</label>
+            <label2></label2>
+            <visible>!String.IsEmpty(Skin.String(Background.$PARAM[window]))</visible>
+            <onclick>Skin.SetString(Background.$PARAM[window],)</onclick>
         </include>
     </include>
 
