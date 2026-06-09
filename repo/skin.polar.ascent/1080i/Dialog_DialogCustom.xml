@@ -454,6 +454,34 @@
             <onclick>Skin.SetString(Skin.FlixArt.Size,ExtraLarge)</onclick>
             <include>DialogCustom_Reload_1118</include>
         </include>
+
+        <include content="Button_Dialog_Setting">
+            <param name="dialog">true</param>
+            <param name="id">8011</param>
+            <param name="groupid">8111</param>
+            <param name="control">radiobutton</param>
+            <param name="istext">true</param>
+            <selected>Skin.String(Skin.FlixArt.Size,Narrow)</selected>
+            <param name="label">Narrow</param>
+            <param name="label2">960x720</param>
+            <param name="has_label2">true</param>
+            <onclick>Skin.SetString(Skin.FlixArt.Size,Narrow)</onclick>
+            <include>DialogCustom_Reload_1118</include>
+        </include>
+
+        <include content="Button_Dialog_Setting">
+            <param name="dialog">true</param>
+            <param name="id">8012</param>
+            <param name="groupid">8112</param>
+            <param name="control">radiobutton</param>
+            <param name="istext">true</param>
+            <selected>Skin.String(Skin.FlixArt.Size,ExtraNarrow)</selected>
+            <param name="label">Extra Narrow</param>
+            <param name="label2">800x720</param>
+            <param name="has_label2">true</param>
+            <onclick>Skin.SetString(Skin.FlixArt.Size,ExtraNarrow)</onclick>
+            <include>DialogCustom_Reload_1118</include>
+        </include>
     </include>
 
     <include name="DialogCustom_Settings_Items_BackgroundDialogImage">
