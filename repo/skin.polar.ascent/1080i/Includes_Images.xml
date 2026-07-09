@@ -28,62 +28,62 @@
 
     <!-- Per-Hub Background Status Labels -->
     <variable name="Info_BackgroundImage_Label_home">
-        <value condition="!String.IsEmpty(Skin.String(Background.home))">[COLOR button_focus]Custom[/COLOR]</value>
+        <value condition="!String.IsEmpty(Skin.String(Background.home))">[COLOR button_focus]$INFO[Skin.String(Background.home)][/COLOR]</value>
         <value>[COLOR dialog_fg_30]Using Global[/COLOR]</value>
     </variable>
 
     <variable name="Info_BackgroundImage_Label_1101">
-        <value condition="!String.IsEmpty(Skin.String(Background.1101))">[COLOR button_focus]Custom[/COLOR]</value>
+        <value condition="!String.IsEmpty(Skin.String(Background.1101))">[COLOR button_focus]$INFO[Skin.String(Background.1101)][/COLOR]</value>
         <value>[COLOR dialog_fg_30]Using Global[/COLOR]</value>
     </variable>
 
     <variable name="Info_BackgroundImage_Label_1102">
-        <value condition="!String.IsEmpty(Skin.String(Background.1102))">[COLOR button_focus]Custom[/COLOR]</value>
+        <value condition="!String.IsEmpty(Skin.String(Background.1102))">[COLOR button_focus]$INFO[Skin.String(Background.1102)][/COLOR]</value>
         <value>[COLOR dialog_fg_30]Using Global[/COLOR]</value>
     </variable>
 
     <variable name="Info_BackgroundImage_Label_1103">
-        <value condition="!String.IsEmpty(Skin.String(Background.1103))">[COLOR button_focus]Custom[/COLOR]</value>
+        <value condition="!String.IsEmpty(Skin.String(Background.1103))">[COLOR button_focus]$INFO[Skin.String(Background.1103)][/COLOR]</value>
         <value>[COLOR dialog_fg_30]Using Global[/COLOR]</value>
     </variable>
 
     <variable name="Info_BackgroundImage_Label_1104">
-        <value condition="!String.IsEmpty(Skin.String(Background.1104))">[COLOR button_focus]Custom[/COLOR]</value>
+        <value condition="!String.IsEmpty(Skin.String(Background.1104))">[COLOR button_focus]$INFO[Skin.String(Background.1104)][/COLOR]</value>
         <value>[COLOR dialog_fg_30]Using Global[/COLOR]</value>
     </variable>
 
     <variable name="Info_BackgroundImage_Label_1105">
-        <value condition="!String.IsEmpty(Skin.String(Background.1105))">[COLOR button_focus]Custom[/COLOR]</value>
+        <value condition="!String.IsEmpty(Skin.String(Background.1105))">[COLOR button_focus]$INFO[Skin.String(Background.1105)][/COLOR]</value>
         <value>[COLOR dialog_fg_30]Using Global[/COLOR]</value>
     </variable>
 
     <variable name="Info_BackgroundImage_Label_1106">
-        <value condition="!String.IsEmpty(Skin.String(Background.1106))">[COLOR button_focus]Custom[/COLOR]</value>
+        <value condition="!String.IsEmpty(Skin.String(Background.1106))">[COLOR button_focus]$INFO[Skin.String(Background.1106)][/COLOR]</value>
         <value>[COLOR dialog_fg_30]Using Global[/COLOR]</value>
     </variable>
 
     <variable name="Info_BackgroundImage_Label_1107">
-        <value condition="!String.IsEmpty(Skin.String(Background.1107))">[COLOR button_focus]Custom[/COLOR]</value>
+        <value condition="!String.IsEmpty(Skin.String(Background.1107))">[COLOR button_focus]$INFO[Skin.String(Background.1107)][/COLOR]</value>
         <value>[COLOR dialog_fg_30]Using Global[/COLOR]</value>
     </variable>
 
     <variable name="Info_BackgroundImage_Label_1108">
-        <value condition="!String.IsEmpty(Skin.String(Background.1108))">[COLOR button_focus]Custom[/COLOR]</value>
+        <value condition="!String.IsEmpty(Skin.String(Background.1108))">[COLOR button_focus]$INFO[Skin.String(Background.1108)][/COLOR]</value>
         <value>[COLOR dialog_fg_30]Using Global[/COLOR]</value>
     </variable>
 
     <variable name="Info_BackgroundImage_Label_1109">
-        <value condition="!String.IsEmpty(Skin.String(Background.1109))">[COLOR button_focus]Custom[/COLOR]</value>
+        <value condition="!String.IsEmpty(Skin.String(Background.1109))">[COLOR button_focus]$INFO[Skin.String(Background.1109)][/COLOR]</value>
         <value>[COLOR dialog_fg_30]Using Global[/COLOR]</value>
     </variable>
 
     <variable name="Info_BackgroundImage_Label_1110">
-        <value condition="!String.IsEmpty(Skin.String(Background.1110))">[COLOR button_focus]Custom[/COLOR]</value>
+        <value condition="!String.IsEmpty(Skin.String(Background.1110))">[COLOR button_focus]$INFO[Skin.String(Background.1110)][/COLOR]</value>
         <value>[COLOR dialog_fg_30]Using Global[/COLOR]</value>
     </variable>
 
     <variable name="Info_BackgroundImage_Label_1111">
-        <value condition="!String.IsEmpty(Skin.String(Background.1111))">[COLOR button_focus]Custom[/COLOR]</value>
+        <value condition="!String.IsEmpty(Skin.String(Background.1111))">[COLOR button_focus]$INFO[Skin.String(Background.1111)][/COLOR]</value>
         <value>[COLOR dialog_fg_30]Using Global[/COLOR]</value>
     </variable>
 
