@@ -1072,6 +1072,16 @@
 
     <!-- Thanks -->
     <include name="SkinSettings_Items_Thanks">
+        <include content="Settings_Button" description="Check for Repository Updates">
+            <param name="dialog">false</param>
+            <param name="window">skinsettings</param>
+            <param name="baseid">$PARAM[baseid]</param>
+            <param name="id">005</param>
+            <param name="control">button</param>
+            <label>Check for Repository Updates</label>
+            <onclick>UpdateAddonRepos()</onclick>
+            <onclick>Notification(Polar Ascent,Checking all repositories for updates...,3000)</onclick>
+        </include>
         <include content="Settings_Label" description="Settings Level">
             <param name="window">skinsettings</param>
             <param name="baseid">$PARAM[baseid]</param>
