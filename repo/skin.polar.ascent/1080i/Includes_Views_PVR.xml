@@ -523,6 +523,6 @@
         <value condition="String.Contains(ListItem.Genre,Science) | String.Contains(ListItem.Genre,Nature) | String.Contains(ListItem.Genre,Education)">144</value>
         <value condition="String.Contains(ListItem.Genre,Lifestyle) | String.Contains(ListItem.Genre,Special Interest) | String.Contains(ListItem.Genre,Cooking) | String.Contains(ListItem.Genre,Food) | String.Contains(ListItem.Genre,Fitness) | String.Contains(ListItem.Genre,Gardening) | String.Contains(ListItem.Genre,Advertisment) | String.Contains(ListItem.Genre,Shopping)">160</value>
         <value condition="String.Contains(ListItem.Genre,Special) | String.Contains(ListItem.Genre,Live)">192</value>
-        <value>256</value>
+        <value>0</value>
     </variable>
 </includes>
